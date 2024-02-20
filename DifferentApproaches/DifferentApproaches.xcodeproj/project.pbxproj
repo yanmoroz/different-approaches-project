@@ -295,6 +295,7 @@
 				DEVELOPMENT_TEAM = NF5X2BH93G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DifferentApproaches/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Different Approaches";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +324,7 @@
 				DEVELOPMENT_TEAM = NF5X2BH93G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DifferentApproaches/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
