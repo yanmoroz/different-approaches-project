@@ -38,6 +38,20 @@ struct GetAllGamesResponse: Decodable {
         let releaseDate: Date?
         let profileUrl: URL
         
+        enum CodingKeys: CodingKey {
+            case id
+            case title
+            case thumbnail
+            case shortDescription
+            case gameUrl
+            case genre
+            case platform
+            case publisher
+            case developer
+            case releaseDate
+            case profileUrl
+        }
+        
         init(from decoder: Decoder) throws {
             let container: KeyedDecodingContainer<CodingKeys> = try decoder.container(keyedBy: CodingKeys.self)
             self.id = try container.decode(Int.self, forKey: .id)
@@ -56,20 +70,6 @@ struct GetAllGamesResponse: Decodable {
             } else {
                 self.releaseDate = nil
             }
-        }
-        
-        enum CodingKeys: String, CodingKey {
-            case id
-            case title
-            case thumbnail
-            case genre
-            case platform
-            case publisher
-            case developer
-            case shortDescription = "short_description"
-            case gameUrl = "game_url"
-            case releaseDate = "release_date"
-            case profileUrl = "profile_url"
         }
     }
 }

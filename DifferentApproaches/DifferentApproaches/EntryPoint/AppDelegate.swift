@@ -13,27 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        URLSessionService().performRequest(MMOBombEndpoint.getAllGames) { result in
-//            switch result {
-//            case .success(let data):
-//                let parser = MMOBombResponseParserImpl()
-//                let foo = try! parser.parseGetAllGamesReponse(data: data)
-//                print(foo)
-//            case .failure(let error):
+//        Task {
+//            do {
+//                let games = try await MMOBombApiService().getAllGames()
+//                print(games)
+//            } catch {
 //                print(error)
 //            }
 //        }
         
-//        URLSessionService().performRequest(MMOBombEndpoint.getGameDetails(405)) { result in
-//            switch result {
-//            case .success(let data):
-//                let parser = MMOBombResponseParserImpl()
-//                let foo = try! parser.parseGetGameByIdReponse(data: data)
-//                print(foo)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        Task {
+            do {
+                let games = try await MMOBombApiService().getGameById(456)
+                print(games)
+            } catch {
+                print(error)
+            }
+        }
         
         return true
     }

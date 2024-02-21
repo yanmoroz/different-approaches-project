@@ -12,12 +12,14 @@ class MMOBombResponseParserImpl: MMOBombResponseParser {
     private let decoder: JSONDecoder = {
         
         let decoder = JSONDecoder()
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.locale = Locale(identifier: "en_US")
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+            return JSONDecoder.DateDecodingStrategy.formatted(dateFormatter)
+        }()
                                           
         return decoder
     }()

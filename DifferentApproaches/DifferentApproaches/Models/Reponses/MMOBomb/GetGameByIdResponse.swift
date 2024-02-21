@@ -50,7 +50,7 @@ struct GetGameByIdResponse: Decodable {
         }
     }
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: CodingKey {
         case id
         case title
         case thumbnail
@@ -61,11 +61,11 @@ struct GetGameByIdResponse: Decodable {
         case publisher
         case developer
         case screenshots
-        case shortDescription = "short_description"
-        case gameUrl = "game_url"
-        case releaseDate = "release_date"
-        case profileUrl = "profile_url"
-        case minimumSystemRequirements = "minimum_system_requirements"
+        case shortDescription
+        case gameUrl
+        case releaseDate
+        case profileUrl
+        case minimumSystemRequirements
     }
     
     struct MinimumSystemRequirements: Decodable {
