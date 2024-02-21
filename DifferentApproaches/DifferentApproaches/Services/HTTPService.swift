@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias HTTPServiceResponseCompletion = (Result<Data, Error>) -> Void
-
 protocol HTTPService {
-    func performRequest(_ request: URLRequestable, completion: HTTPServiceResponseCompletion?)
+    func performRequest(_ request: URLRequestable) async throws -> Result<Data, Error>
 }

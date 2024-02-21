@@ -25,13 +25,13 @@ class MMOBombApiService {
     }
     
     func getAllGames() async throws {
-//        httpService.performRequest(MMOBombEndpoint.getAllGames) { result in
-//            switch result {
-//            case .success(let data):
-//                
-//            case .failure(let error):
-//            }
-//        }
+        let result = try await httpService.performRequest(MMOBombEndpoint.getAllGames)
+        switch result {
+        case .success(let data):
+            break
+        case .failure(let error):
+            break
+        }
     }
     
     func getRandomGame() {
