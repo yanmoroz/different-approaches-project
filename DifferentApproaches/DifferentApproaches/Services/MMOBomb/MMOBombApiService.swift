@@ -8,32 +8,33 @@
 import Foundation
 
 protocol MMOBombResponseParser {
-    
-    func parseGetAllGamesReponse(data: Data) -> [Game]
-    func parseGetGameByIdReponse(data: Data) -> [Game]
+    func parseGetAllGamesReponse(data: Data) throws -> [Game]?
+    func parseGetGameByIdReponse(data: Data) throws -> GameDetailed?
 }
 
-class MMOBombApiResponseParser: MMOBombResponseParser {
+class MMOBombApiService {
     
-    func parseGetAllGamesReponse(data: Data) -> [Game] {
-        return []
+    private let httpService: HTTPService
+    private let responseParser: MMOBombResponseParser
+    
+    init(httpService: HTTPService = URLSessionService(),
+         responseParser: MMOBombResponseParser = MMOBombResponseParserImpl()) {
+        
+        self.httpService = httpService
+        self.responseParser = responseParser
     }
     
-    func parseGetGameByIdReponse(data: Data) -> [Game] {
-        return []
+    func getAllGames() async throws {
+//        httpService.performRequest(MMOBombEndpoint.getAllGames) { result in
+//            switch result {
+//            case .success(let data):
+//                
+//            case .failure(let error):
+//            }
+//        }
+    }
+    
+    func getRandomGame() {
+        
     }
 }
-
-//class MMOBombApiService {
-//    
-//    private let httpService: HTTPService
-//    private let responseParser: ResponseParser
-//    
-//    func getAllGames() {
-//        
-//    }
-//    
-//    func getRandomGame() {
-//        
-//    }
-//}

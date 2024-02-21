@@ -13,6 +13,9 @@
 		A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF49C2B85408A00D55F06 /* URLSessionService.swift */; };
 		A31EF4A02B85447600D55F06 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF49F2B85447600D55F06 /* Game.swift */; };
 		A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */; };
+		A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */; };
+		A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */; };
+		A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A92B858DE100D55F06 /* GameDetailed.swift */; };
 		A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */; };
 		A32EAAB62B8507A1003ED411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB52B8507A1003ED411 /* Assets.xcassets */; };
 		A32EAAB92B8507A1003ED411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB72B8507A1003ED411 /* LaunchScreen.storyboard */; };
@@ -26,6 +29,9 @@
 		A31EF49C2B85408A00D55F06 /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 		A31EF49F2B85447600D55F06 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGamesResponse.swift; sourceTree = "<group>"; };
+		A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombResponseParserImpl.swift; sourceTree = "<group>"; };
+		A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGameByIdResponse.swift; sourceTree = "<group>"; };
+		A31EF4A92B858DE100D55F06 /* GameDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailed.swift; sourceTree = "<group>"; };
 		A32EAAA92B8507A0003ED411 /* DifferentApproaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DifferentApproaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32EAAB52B8507A1003ED411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 			children = (
 				A32EAAC42B851906003ED411 /* MMOBombApiService.swift */,
 				A31EF4982B853F1600D55F06 /* MMOBombEndpoint.swift */,
+				A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */,
 			);
 			path = MMOBomb;
 			sourceTree = "<group>";
@@ -57,6 +64,8 @@
 		A31EF49E2B85445500D55F06 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A31EF49F2B85447600D55F06 /* Game.swift */,
+				A31EF4A92B858DE100D55F06 /* GameDetailed.swift */,
 				A31EF4A12B85448B00D55F06 /* Reponses */,
 			);
 			path = Models;
@@ -65,7 +74,6 @@
 		A31EF4A12B85448B00D55F06 /* Reponses */ = {
 			isa = PBXGroup;
 			children = (
-				A31EF49F2B85447600D55F06 /* Game.swift */,
 				A31EF4A42B8544CF00D55F06 /* MMOBomb */,
 			);
 			path = Reponses;
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */,
+				A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */,
 			);
 			path = MMOBomb;
 			sourceTree = "<group>";
@@ -205,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
+				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
+				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,
 				A31EF49B2B853F5200D55F06 /* URLRequestable.swift in Sources */,
