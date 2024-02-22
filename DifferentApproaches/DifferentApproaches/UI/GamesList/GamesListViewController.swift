@@ -9,8 +9,8 @@ import UIKit
 
 final class GamesListViewController: UIViewController {
     
-    private lazy var customView = view as! GamesListView
-    var presenter: GamesListPresentation!
+    private lazy var customView = view as? GamesListView
+    var presenter: GamesListPresentation?
     
     override func loadView() {
         view = GamesListView()
@@ -18,17 +18,17 @@ final class GamesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter?.viewDidLoad()
     }
 }
 
 extension GamesListViewController: GamesListViewInterface {
  
     func reloadData() {
-        customView.reloadTableView()
+        customView?.reloadTableView()
     }
     
     func setTableViewProvider(_ provider: TableViewProvider) {
-        customView.setTableViewProvider(provider)
+        customView?.setTableViewProvider(provider)
     }
 }

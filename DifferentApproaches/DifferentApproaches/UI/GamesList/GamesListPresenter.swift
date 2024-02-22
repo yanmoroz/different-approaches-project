@@ -7,15 +7,9 @@
 
 import Foundation
 
-extension GamesListPresenter: GamesListTableViewProviderDelegate {
-    func didSelectGame(at index: Int) {
-        print(index)
-    }
-}
-
 final class GamesListPresenter {
     
-    private weak var view: GamesListViewInterface!
+    private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
     private let loadingTableViewProvider = LoadingTableViewProvider()
     private lazy var gamesListTableViewProvider: GamesListTableViewProvider = {
@@ -24,7 +18,7 @@ final class GamesListPresenter {
         return provider
     }()
     
-    private var state = GamesListFlow.ViewState.loading {
+    private var state = ViewState.loading {
         didSet {
             updateViewBaseOn(state: state)
         }
@@ -38,16 +32,16 @@ final class GamesListPresenter {
     }
     
     private func setLoadingTableView() {
-        view.setTableViewProvider(loadingTableViewProvider)
-        view.reloadData()
+        view?.setTableViewProvider(loadingTableViewProvider)
+        view?.reloadData()
     }
     
     private func setGamesListTableView() {
-        view.setTableViewProvider(gamesListTableViewProvider)
-        view.reloadData()
+        view?.setTableViewProvider(gamesListTableViewProvider)
+        view?.reloadData()
     }
     
-    private func updateViewBaseOn(state: GamesListFlow.ViewState) {
+    private func updateViewBaseOn(state: ViewState) {
         switch state {
         case .loading:
             setLoadingTableView()
@@ -69,6 +63,18 @@ final class GamesListPresenter {
                 state = .loadFailed(error)
             }
         }
+    }
+    
+    private enum ViewState {
+        case loading
+        case loadSucceed([Game])
+        case loadFailed(Error)
+    }
+}
+
+extension GamesListPresenter: GamesListTableViewProviderDelegate {
+    func didSelectGame(at index: Int) {
+        print(index)
     }
 }
 

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol GamesListPresentation {
-    func viewDidLoad()
-}
-
 protocol GamesListViewInterface: AnyObject {
     func reloadData()
     func setTableViewProvider(_ provider: TableViewProvider)
+}
+
+protocol GamesListPresentation {
+    func viewDidLoad()
 }

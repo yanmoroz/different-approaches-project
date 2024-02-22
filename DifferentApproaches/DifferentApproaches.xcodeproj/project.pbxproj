@@ -34,7 +34,6 @@
 		A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */; };
 		A3CF2AD22B877731005E4F7C /* GamesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD12B877731005E4F7C /* GamesListContract.swift */; };
 		A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */; };
-		A3CF2AD62B87E125005E4F7C /* GamesListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */; };
 		A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */; };
 		A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */; };
 		A3CF2ADC2B87E3ED005E4F7C /* TableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */; };
@@ -75,7 +74,6 @@
 		A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListPresenter.swift; sourceTree = "<group>"; };
 		A3CF2AD12B877731005E4F7C /* GamesListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListContract.swift; sourceTree = "<group>"; };
 		A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListAssembly.swift; sourceTree = "<group>"; };
-		A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListFlow.swift; sourceTree = "<group>"; };
 		A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProvider.swift; sourceTree = "<group>"; };
@@ -223,24 +221,39 @@
 			children = (
 				A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */,
 				A3CF2AD12B877731005E4F7C /* GamesListContract.swift */,
-				A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */,
 				A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */,
-				A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */,
 				A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */,
 				A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */,
+			);
+			path = GamesList;
+			sourceTree = "<group>";
+		};
+		A3CF2AE72B8806BD005E4F7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */,
 				A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A3CF2AE82B8806E9005E4F7C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */,
 				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
 				A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */,
 			);
-			path = GamesList;
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		A3E469C22B86DAB400421B78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				A3E469C02B86D8E700421B78 /* MainViewController.swift */,
+				A3CF2AE72B8806BD005E4F7C /* Cells */,
 				A3CF2ACE2B8774EE005E4F7C /* GamesList */,
+				A3CF2AE82B8806E9005E4F7C /* Providers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -327,7 +340,6 @@
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
 				A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */,
-				A3CF2AD62B87E125005E4F7C /* GamesListFlow.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
 				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
 				A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */,
