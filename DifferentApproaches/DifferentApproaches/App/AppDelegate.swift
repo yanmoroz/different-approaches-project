@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import OSLog
+
+extension Error {
+    func log() {
+        Logger().error("\(self.localizedDescription)")
+    }
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let games = try await MMOBombApiServiceImpl().getAllGames()
                 print(games.count)
             } catch {
-                print(error)
+                error.log()
             }
         }
         
@@ -27,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let game = try await MMOBombApiServiceImpl().getGameById(456)
                 print(game.title)
             } catch {
-                print(error)
+                error.log()
             }
         }
         
@@ -36,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let cards = try await MTGApiServiceImpl().getAllCards()
                 print(cards.count)
             } catch {
-                print(error)
+                error.log()
             }
         }
         
@@ -45,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let card = try await MTGApiServiceImpl().getCardById(129711)
                 print(card.name)
             } catch {
-                print(error)
+                error.log()
             }
         }
         
