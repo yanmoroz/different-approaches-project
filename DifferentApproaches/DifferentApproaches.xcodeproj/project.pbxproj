@@ -29,6 +29,7 @@
 		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
 		A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAE2B86C80700057712 /* Constants.swift */; };
 		A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB32B86CF6000057712 /* NetworkError.swift */; };
+		A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB62B86D37500057712 /* Error+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A3BB8BAE2B86C80700057712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3BB8BB32B86CF6000057712 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A3BB8BB62B86D37500057712 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A32EAAC12B85123B003ED411 /* App */,
+				A3BB8BB52B86D35D00057712 /* Extensions */,
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
 				A32EAAC02B851173003ED411 /* SupportingFiles */,
@@ -141,11 +144,11 @@
 			children = (
 				A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */,
 				A31EF4962B853EDC00D55F06 /* HTTPService.swift */,
+				A3BB8BB32B86CF6000057712 /* NetworkError.swift */,
 				A31EF49A2B853F5200D55F06 /* URLRequestable.swift */,
 				A31EF49C2B85408A00D55F06 /* URLSessionService.swift */,
 				A31EF4952B853EC700D55F06 /* MMOBomb */,
 				A3BB8B9D2B86BF9900057712 /* MTG */,
-				A3BB8BB32B86CF6000057712 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -177,6 +180,14 @@
 				A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		A3BB8BB52B86D35D00057712 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB8BB62B86D37500057712 /* Error+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
 				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
+				A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,
