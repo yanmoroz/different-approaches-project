@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GamesListViewInterface: AnyObject {
+protocol GamesListViewInterface: ViewInterface {
     func reloadData()
     func setTableViewProvider(_ provider: TableViewProvider)
 }

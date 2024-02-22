@@ -41,6 +41,7 @@
 		A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */; };
 		A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */; };
 		A3CF2AE62B8800CB005E4F7C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */; };
+		A3CF2AEB2B8809BF005E4F7C /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AEA2B8809BF005E4F7C /* ViewInterface.swift */; };
 		A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E469C02B86D8E700421B78 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListTableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		A3CF2AEA2B8809BF005E4F7C /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		A3E469C02B86D8E700421B78 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				A3BB8BB52B86D35D00057712 /* Extensions */,
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
+				A3CF2AE92B8809B4005E4F7C /* Protocols */,
 				A32EAAC02B851173003ED411 /* SupportingFiles */,
 				A3E469C22B86DAB400421B78 /* UI */,
 			);
@@ -245,6 +248,14 @@
 				A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		A3CF2AE92B8809B4005E4F7C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AEA2B8809BF005E4F7C /* ViewInterface.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A3E469C22B86DAB400421B78 /* UI */ = {
@@ -356,6 +367,7 @@
 				A3BB8BA42B86C36F00057712 /* Card.swift in Sources */,
 				A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */,
 				A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */,
+				A3CF2AEB2B8809BF005E4F7C /* ViewInterface.swift in Sources */,
 				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
 				A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */,
 				A31EF4992B853F1600D55F06 /* MMOBombEndpoint.swift in Sources */,

@@ -12,6 +12,7 @@ final class GamesListPresenter {
     private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
     private let loadingTableViewProvider = LoadingTableViewProvider()
+    
     private lazy var gamesListTableViewProvider: GamesListTableViewProvider = {
         let provider = GamesListTableViewProvider()
         provider.delegate = self
@@ -50,7 +51,7 @@ final class GamesListPresenter {
             gamesListTableViewProvider.games = games
             setGamesListTableView()
         case .loadFailed(let error):
-            break
+            view?.showError(error)
         }
     }
     
