@@ -29,6 +29,19 @@
 		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
 		A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB32B86CF6000057712 /* NetworkError.swift */; };
 		A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB62B86D37500057712 /* Error+Extension.swift */; };
+		A3CF2ACB2B87748C005E4F7C /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */; };
+		A3CF2ACD2B8774CA005E4F7C /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */; };
+		A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */; };
+		A3CF2AD22B877731005E4F7C /* GamesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD12B877731005E4F7C /* GamesListContract.swift */; };
+		A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */; };
+		A3CF2AD62B87E125005E4F7C /* GamesListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */; };
+		A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */; };
+		A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */; };
+		A3CF2ADC2B87E3ED005E4F7C /* TableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */; };
+		A3CF2ADE2B87E415005E4F7C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */; };
+		A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */; };
+		A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */; };
+		A3CF2AE62B8800CB005E4F7C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */; };
 		A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E469C02B86D8E700421B78 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +70,19 @@
 		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A3BB8BB32B86CF6000057712 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A3BB8BB62B86D37500057712 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
+		A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListPresenter.swift; sourceTree = "<group>"; };
+		A3CF2AD12B877731005E4F7C /* GamesListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListContract.swift; sourceTree = "<group>"; };
+		A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListAssembly.swift; sourceTree = "<group>"; };
+		A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListFlow.swift; sourceTree = "<group>"; };
+		A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewProvider.swift; sourceTree = "<group>"; };
+		A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProvider.swift; sourceTree = "<group>"; };
+		A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListTableViewProvider.swift; sourceTree = "<group>"; };
+		A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		A3E469C02B86D8E700421B78 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,14 +212,35 @@
 			isa = PBXGroup;
 			children = (
 				A3BB8BB62B86D37500057712 /* Error+Extension.swift */,
+				A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */,
+				A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A3CF2ACE2B8774EE005E4F7C /* GamesList */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */,
+				A3CF2AD12B877731005E4F7C /* GamesListContract.swift */,
+				A3CF2AD52B87E125005E4F7C /* GamesListFlow.swift */,
+				A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */,
+				A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */,
+				A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */,
+				A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */,
+				A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */,
+				A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */,
+				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
+				A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */,
+			);
+			path = GamesList;
 			sourceTree = "<group>";
 		};
 		A3E469C22B86DAB400421B78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				A3E469C02B86D8E700421B78 /* MainViewController.swift */,
+				A3CF2ACE2B8774EE005E4F7C /* GamesList */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -271,24 +318,37 @@
 				A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
 				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
+				A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */,
+				A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
 				A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */,
 				A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */,
+				A3CF2ACB2B87748C005E4F7C /* GamesListViewController.swift in Sources */,
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
+				A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */,
+				A3CF2AD62B87E125005E4F7C /* GamesListFlow.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
 				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
 				A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */,
+				A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
+				A3CF2ADC2B87E3ED005E4F7C /* TableViewProvider.swift in Sources */,
+				A3CF2ACD2B8774CA005E4F7C /* GamesListView.swift in Sources */,
+				A3CF2ADE2B87E415005E4F7C /* UITableViewCell+Extension.swift in Sources */,
+				A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
+				A3CF2AE62B8800CB005E4F7C /* UITableView+Extension.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,
 				A31EF49B2B853F5200D55F06 /* URLRequestable.swift in Sources */,
 				A3BB8BA42B86C36F00057712 /* Card.swift in Sources */,
 				A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */,
+				A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */,
 				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
 				A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */,
 				A31EF4992B853F1600D55F06 /* MMOBombEndpoint.swift in Sources */,
 				A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */,
+				A3CF2AD22B877731005E4F7C /* GamesListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

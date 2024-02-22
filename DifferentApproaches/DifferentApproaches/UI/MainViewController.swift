@@ -12,10 +12,11 @@ final class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .green
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .red
+        let vc1 = GamesListViewController()
+        let p1 = GamesListPresenter(view: vc1, apiService: MMOBombApiServiceImpl())
+        vc1.presenter = p1
+        
+        let vc2 = GamesListViewController()
         
         viewControllers = [
             vc1, vc2
