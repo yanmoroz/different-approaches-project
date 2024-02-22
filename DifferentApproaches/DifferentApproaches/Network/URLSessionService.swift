@@ -7,7 +7,7 @@
 
 import Foundation
 
-class URLSessionService: HTTPService {
+final class URLSessionService: HTTPService {
     
     private let session: URLSession
     

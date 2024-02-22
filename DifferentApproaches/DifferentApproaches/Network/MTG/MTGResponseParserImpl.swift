@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MTGResponseParserImpl: MTGResponseParser {
+final class MTGResponseParserImpl: MTGResponseParser {
     
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()

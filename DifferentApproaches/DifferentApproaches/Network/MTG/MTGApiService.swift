@@ -17,7 +17,7 @@ protocol MTGApiService {
     func getCardById(_ id: Int) async throws -> Card
 }
 
-class MTGApiServiceImpl: MTGApiService {
+final class MTGApiServiceImpl: MTGApiService {
     
     private let httpService: HTTPService
     private let responseParser: MTGResponseParser

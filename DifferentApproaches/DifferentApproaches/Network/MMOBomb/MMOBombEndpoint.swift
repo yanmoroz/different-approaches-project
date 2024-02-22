@@ -12,8 +12,6 @@ enum MMOBombEndpoint: URLRequestable {
     case getAllGames
     case getGameDetails(Int)
     
-    static let baseUrl = Constants.mmoBombBaseUrl
-    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
@@ -55,11 +53,15 @@ enum MMOBombEndpoint: URLRequestable {
             queryItems.append(URLQueryItem(name: "id", value: "\(id)"))
         }
         
-        guard let baseUrl = URL(string: Self.baseUrl) else {
+        guard let baseUrl = URL(string: Constants.mmoBombBaseUrl) else {
             throw NetworkError.badBaseUrl
         }
         
         return baseUrl.appendingPathComponent(relativePath)
             .appending(queryItems: queryItems)
+    }
+    
+    private enum Constants {
+        static let mmoBombBaseUrl = "https://www.mmobomb.com/api1"
     }
 }

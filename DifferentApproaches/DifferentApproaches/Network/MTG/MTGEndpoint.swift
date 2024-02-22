@@ -12,8 +12,6 @@ enum MTGEndpoint: URLRequestable {
     case getAllCards
     case getCardDetails(Int)
     
-    static let baseUrl = Constants.magicTheGatheringBaseUrl
-    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
@@ -53,10 +51,14 @@ enum MTGEndpoint: URLRequestable {
             relativePath = "/cards/\(id)"
         }
         
-        guard let baseUrl = URL(string: Self.baseUrl) else {
+        guard let baseUrl = URL(string: Constants.magicTheGatheringBaseUrl) else {
             throw NetworkError.badBaseUrl
         }
         
         return baseUrl.appendingPathComponent(relativePath)
+    }
+    
+    private enum Constants {
+        static let magicTheGatheringBaseUrl = "https://api.magicthegathering.io/v1"
     }
 }

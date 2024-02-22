@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MMOBombResponseParserImpl: MMOBombResponseParser {
+final class MMOBombResponseParserImpl: MMOBombResponseParser {
     
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()

@@ -27,7 +27,6 @@
 		A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */; };
 		A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */; };
 		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
-		A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAE2B86C80700057712 /* Constants.swift */; };
 		A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB32B86CF6000057712 /* NetworkError.swift */; };
 		A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB62B86D37500057712 /* Error+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByIdResponse.swift; sourceTree = "<group>"; };
 		A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGEndpoint.swift; sourceTree = "<group>"; };
 		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		A3BB8BAE2B86C80700057712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3BB8BB32B86CF6000057712 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A3BB8BB62B86D37500057712 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */,
-				A3BB8BAE2B86C80700057712 /* Constants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */,
-				A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
 				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
