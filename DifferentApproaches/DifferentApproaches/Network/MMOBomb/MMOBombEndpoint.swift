@@ -14,8 +14,8 @@ enum MMOBombEndpoint: URLRequestable {
     
     static let baseUrl = Constants.mmoBombBaseUrl
     
-    func asURLRequest() -> URLRequest {
-        var urlRequest = URLRequest(url: getUrl())
+    func asURLRequest() throws -> URLRequest {
+        var urlRequest = try URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
         urlRequest.httpBody = getHttpBody()
         return urlRequest
@@ -43,7 +43,7 @@ enum MMOBombEndpoint: URLRequestable {
         }
     }
     
-    private func getUrl() -> URL {
+    private func getUrl() throws -> URL {
         let relativePath: String
         var queryItems: [URLQueryItem] = []
         
@@ -55,8 +55,11 @@ enum MMOBombEndpoint: URLRequestable {
             queryItems.append(URLQueryItem(name: "id", value: "\(id)"))
         }
         
-        return URL(string: Self.baseUrl)!
-            .appendingPathComponent(relativePath)
+        guard let baseUrl = URL(string: Self.baseUrl) else {
+            throw NetworkError.badBaseUrl
+        }
+        
+        return baseUrl.appendingPathComponent(relativePath)
             .appending(queryItems: queryItems)
     }
 }

@@ -28,6 +28,7 @@
 		A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */; };
 		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
 		A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAE2B86C80700057712 /* Constants.swift */; };
+		A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB32B86CF6000057712 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGEndpoint.swift; sourceTree = "<group>"; };
 		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A3BB8BAE2B86C80700057712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3BB8BB32B86CF6000057712 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				A31EF49C2B85408A00D55F06 /* URLSessionService.swift */,
 				A31EF4952B853EC700D55F06 /* MMOBomb */,
 				A3BB8B9D2B86BF9900057712 /* MTG */,
+				A3BB8BB32B86CF6000057712 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
+				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol URLRequestable {
-    func asURLRequest() -> URLRequest
+    func asURLRequest() throws -> URLRequest
 }
