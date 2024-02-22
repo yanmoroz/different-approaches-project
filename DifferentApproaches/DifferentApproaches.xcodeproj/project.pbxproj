@@ -29,6 +29,7 @@
 		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
 		A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB32B86CF6000057712 /* NetworkError.swift */; };
 		A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BB62B86D37500057712 /* Error+Extension.swift */; };
+		A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E469C02B86D8E700421B78 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A3BB8BB32B86CF6000057712 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A3BB8BB62B86D37500057712 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		A3E469C02B86D8E700421B78 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
 				A32EAAC02B851173003ED411 /* SupportingFiles */,
+				A3E469C22B86DAB400421B78 /* UI */,
 			);
 			path = DifferentApproaches;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				A3BB8BB62B86D37500057712 /* Error+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A3E469C22B86DAB400421B78 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A3E469C02B86D8E700421B78 /* MainViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
 				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
+				A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */,
 				A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */,
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
