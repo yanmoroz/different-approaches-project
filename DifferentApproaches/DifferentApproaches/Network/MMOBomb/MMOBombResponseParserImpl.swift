@@ -10,7 +10,6 @@ import Foundation
 class MMOBombResponseParserImpl: MMOBombResponseParser {
     
     private let decoder: JSONDecoder = {
-        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = {
@@ -20,16 +19,15 @@ class MMOBombResponseParserImpl: MMOBombResponseParser {
             dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
             return JSONDecoder.DateDecodingStrategy.formatted(dateFormatter)
         }()
-                                          
         return decoder
     }()
     
-    func parseGetAllGamesReponse(data: Data) throws -> [Game]? {
+    func parseGetAllGamesResponse(data: Data) throws -> [Game] {
         let parsedResponse = try decoder.decode(GetAllGamesResponse.self, from: data)
         return parsedResponse.games.map(Game.init)
     }
     
-    func parseGetGameByIdReponse(data: Data) throws -> GameDetailed? {
+    func parseGetGameByIdResponse(data: Data) throws -> GameDetailed {
         let parsedResponse = try decoder.decode(GetGameByIdResponse.self, from: data)
         return GameDetailed(response: parsedResponse)
     }

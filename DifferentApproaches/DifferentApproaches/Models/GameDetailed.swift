@@ -41,42 +41,42 @@ struct GameDetailed {
 
 extension GameDetailed {
     init(response: GetGameByIdResponse) {
-        self.id = response.id
-        self.title = response.title
-        self.thumbnail = response.thumbnail
-        self.status = response.status
-        self.shortDescription = response.shortDescription
-        self.description = response.description
-        self.gameUrl = response.gameUrl
-        self.genre = response.genre
-        self.platform = response.platform
-        self.publisher = response.publisher
-        self.developer = response.developer
-        self.releaseDate = response.releaseDate
-        self.profileUrl = response.profileUrl
-        self.screenshots = response.screenshots.map(Screenshot.init)
+        id = response.id
+        title = response.title
+        thumbnail = response.thumbnail
+        status = response.status
+        shortDescription = response.shortDescription
+        description = response.description
+        gameUrl = response.gameUrl
+        genre = response.genre
+        platform = response.platform
+        publisher = response.publisher
+        developer = response.developer
+        releaseDate = response.releaseDate
+        profileUrl = response.profileUrl
+        screenshots = response.screenshots.map(Screenshot.init)
         
         if let minimumSystemRequirements = response.minimumSystemRequirements {
             self.minimumSystemRequirements = .init(minimumSystemRequirements: minimumSystemRequirements)
         } else {
-            self.minimumSystemRequirements = nil
+            minimumSystemRequirements = nil
         }
     }
 }
 
 extension GameDetailed.MinimumSystemRequirements {
     init(minimumSystemRequirements: GetGameByIdResponse.MinimumSystemRequirements) {
-        self.os = minimumSystemRequirements.os
-        self.processor = minimumSystemRequirements.processor
-        self.memory = minimumSystemRequirements.memory
-        self.graphics = minimumSystemRequirements.graphics
-        self.storage = minimumSystemRequirements.storage
+        os = minimumSystemRequirements.os
+        processor = minimumSystemRequirements.processor
+        memory = minimumSystemRequirements.memory
+        graphics = minimumSystemRequirements.graphics
+        storage = minimumSystemRequirements.storage
     }
 }
 
 extension GameDetailed.Screenshot {
     init(screenshot: GetGameByIdResponse.Screenshot) {
-        self.id = screenshot.id
-        self.image = screenshot.image
+        id = screenshot.id
+        image = screenshot.image
     }
 }

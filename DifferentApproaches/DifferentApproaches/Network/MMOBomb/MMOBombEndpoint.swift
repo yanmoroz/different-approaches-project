@@ -9,15 +9,12 @@ import Foundation
 
 enum MMOBombEndpoint: URLRequestable {
     
-    typealias URLRequestParameters = [String: Any]
-    
     case getAllGames
     case getGameDetails(Int)
     
-    static let baseUrl = "https://www.mmobomb.com/api1/"
+    static let baseUrl = Constants.mmoBombBaseUrl
     
     func asURLRequest() -> URLRequest {
-        
         var urlRequest = URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
         urlRequest.httpBody = getHttpBody()
@@ -25,8 +22,7 @@ enum MMOBombEndpoint: URLRequestable {
     }
     
     private func getHttpBody() -> Data? {
-        
-        let parameters: URLRequestParameters?
+        let parameters: [String: Any]?
         
         switch self {
         case .getAllGames, .getGameDetails:
@@ -41,7 +37,6 @@ enum MMOBombEndpoint: URLRequestable {
     }
     
     private func getMethod() -> HTTPMethod {
-        
         switch self {
         case .getAllGames, .getGameDetails:
             return .get
@@ -49,30 +44,19 @@ enum MMOBombEndpoint: URLRequestable {
     }
     
     private func getUrl() -> URL {
-        
         let relativePath: String
         var queryItems: [URLQueryItem] = []
         
         switch self {
         case .getAllGames:
-            relativePath = "games"
+            relativePath = "/games"
         case .getGameDetails(let id):
-            relativePath = "game"
+            relativePath = "/game"
             queryItems.append(URLQueryItem(name: "id", value: "\(id)"))
         }
         
         return URL(string: Self.baseUrl)!
             .appendingPathComponent(relativePath)
             .appending(queryItems: queryItems)
-    }
-    
-    private enum HTTPMethod: String {
-        
-        case get = "GET"
-        case post = "POST"
-        case put = "PUT"
-        case delete = "DELETE"
-        case patch = "PATCH"
-        case head = "HEAD"
     }
 }

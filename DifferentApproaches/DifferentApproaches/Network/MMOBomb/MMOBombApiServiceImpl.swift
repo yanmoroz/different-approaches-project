@@ -8,11 +8,16 @@
 import Foundation
 
 protocol MMOBombResponseParser {
-    func parseGetAllGamesReponse(data: Data) throws -> [Game]?
-    func parseGetGameByIdReponse(data: Data) throws -> GameDetailed?
+    func parseGetAllGamesResponse(data: Data) throws -> [Game]
+    func parseGetGameByIdResponse(data: Data) throws -> GameDetailed
 }
 
-class MMOBombApiService {
+protocol MMOBombApiService {
+    func getAllGames() async throws -> [Game]
+    func getGameById(_ id: Int) async throws -> GameDetailed
+}
+
+class MMOBombApiServiceImpl: MMOBombApiService {
     
     private let httpService: HTTPService
     private let responseParser: MMOBombResponseParser
@@ -24,23 +29,21 @@ class MMOBombApiService {
         self.responseParser = responseParser
     }
     
-    func getAllGames() async throws -> [Game]? {
+    func getAllGames() async throws -> [Game] {
         let result = try await httpService.performRequest(MMOBombEndpoint.getAllGames)
         switch result {
         case .success(let data):
-            let games = try responseParser.parseGetAllGamesReponse(data: data)
-            return games
+            return try responseParser.parseGetAllGamesResponse(data: data)
         case .failure(let error):
             throw error
         }
     }
     
-    func getGameById(_ id: Int) async throws -> GameDetailed? {
+    func getGameById(_ id: Int) async throws -> GameDetailed {
         let result = try await httpService.performRequest(MMOBombEndpoint.getGameDetails(id))
         switch result {
         case .success(let data):
-            let games = try responseParser.parseGetGameByIdReponse(data: data)
-            return games
+            return try responseParser.parseGetGameByIdResponse(data: data)
         case .failure(let error):
             throw error
         }

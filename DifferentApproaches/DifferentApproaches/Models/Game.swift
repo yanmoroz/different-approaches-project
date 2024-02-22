@@ -24,16 +24,16 @@ struct Game {
 extension Game {
     
     init(response: GetAllGamesResponse.Game) {
-        self.id = response.id
-        self.title = response.title
-        self.thumbnail = response.thumbnail
-        self.shortDescription = response.shortDescription
-        self.gameUrl = response.gameUrl
-        self.genre = response.genre
-        self.platform = response.platform
-        self.publisher = response.publisher
-        self.developer = response.developer
-        self.releaseDate = response.releaseDate
-        self.profileUrl = response.profileUrl
+        id = response.id
+        title = response.title
+        thumbnail = response.thumbnail
+        shortDescription = response.shortDescription
+        gameUrl = response.gameUrl
+        genre = response.genre
+        platform = response.platform
+        publisher = response.publisher
+        developer = response.developer
+        releaseDate = response.releaseDate
+        profileUrl = response.profileUrl
     }
 }

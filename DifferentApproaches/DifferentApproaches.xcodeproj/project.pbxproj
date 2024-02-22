@@ -19,7 +19,15 @@
 		A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */; };
 		A32EAAB62B8507A1003ED411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB52B8507A1003ED411 /* Assets.xcassets */; };
 		A32EAAB92B8507A1003ED411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB72B8507A1003ED411 /* LaunchScreen.storyboard */; };
-		A32EAAC52B851906003ED411 /* MMOBombApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAC42B851906003ED411 /* MMOBombApiService.swift */; };
+		A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */; };
+		A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */; };
+		A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */; };
+		A3BB8BA42B86C36F00057712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA32B86C36F00057712 /* Card.swift */; };
+		A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA62B86C49F00057712 /* GetAllCardsResponse.swift */; };
+		A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */; };
+		A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */; };
+		A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */; };
+		A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BAE2B86C80700057712 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +45,15 @@
 		A32EAAB52B8507A1003ED411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32EAAB82B8507A1003ED411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A32EAABA2B8507A1003ED411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A32EAAC42B851906003ED411 /* MMOBombApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiService.swift; sourceTree = "<group>"; };
+		A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiServiceImpl.swift; sourceTree = "<group>"; };
+		A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParserImpl.swift; sourceTree = "<group>"; };
+		A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiService.swift; sourceTree = "<group>"; };
+		A3BB8BA32B86C36F00057712 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A3BB8BA62B86C49F00057712 /* GetAllCardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCardsResponse.swift; sourceTree = "<group>"; };
+		A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByIdResponse.swift; sourceTree = "<group>"; };
+		A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGEndpoint.swift; sourceTree = "<group>"; };
+		A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A3BB8BAE2B86C80700057712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +70,8 @@
 		A31EF4952B853EC700D55F06 /* MMOBomb */ = {
 			isa = PBXGroup;
 			children = (
-				A32EAAC42B851906003ED411 /* MMOBombApiService.swift */,
+				A3BB8BB02B86CC7000057712 /* Responses */,
+				A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */,
 				A31EF4982B853F1600D55F06 /* MMOBombEndpoint.swift */,
 				A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */,
 			);
@@ -64,28 +81,11 @@
 		A31EF49E2B85445500D55F06 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A3BB8BA32B86C36F00057712 /* Card.swift */,
 				A31EF49F2B85447600D55F06 /* Game.swift */,
 				A31EF4A92B858DE100D55F06 /* GameDetailed.swift */,
-				A31EF4A12B85448B00D55F06 /* Reponses */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A31EF4A12B85448B00D55F06 /* Reponses */ = {
-			isa = PBXGroup;
-			children = (
-				A31EF4A42B8544CF00D55F06 /* MMOBomb */,
-			);
-			path = Reponses;
-			sourceTree = "<group>";
-		};
-		A31EF4A42B8544CF00D55F06 /* MMOBomb */ = {
-			isa = PBXGroup;
-			children = (
-				A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */,
-				A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */,
-			);
-			path = MMOBomb;
 			sourceTree = "<group>";
 		};
 		A32EAAA02B8507A0003ED411 = {
@@ -107,9 +107,9 @@
 		A32EAAAB2B8507A0003ED411 /* DifferentApproaches */ = {
 			isa = PBXGroup;
 			children = (
-				A32EAAC12B85123B003ED411 /* EntryPoint */,
+				A32EAAC12B85123B003ED411 /* App */,
 				A31EF49E2B85445500D55F06 /* Models */,
-				A32EAAC22B85189C003ED411 /* Services */,
+				A32EAAC22B85189C003ED411 /* Network */,
 				A32EAAC02B851173003ED411 /* SupportingFiles */,
 			);
 			path = DifferentApproaches;
@@ -125,23 +125,55 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		A32EAAC12B85123B003ED411 /* EntryPoint */ = {
+		A32EAAC12B85123B003ED411 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */,
+				A3BB8BAE2B86C80700057712 /* Constants.swift */,
 			);
-			path = EntryPoint;
+			path = App;
 			sourceTree = "<group>";
 		};
-		A32EAAC22B85189C003ED411 /* Services */ = {
+		A32EAAC22B85189C003ED411 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A3BB8BAC2B86C7A700057712 /* HTTPMethod.swift */,
 				A31EF4962B853EDC00D55F06 /* HTTPService.swift */,
 				A31EF49A2B853F5200D55F06 /* URLRequestable.swift */,
 				A31EF49C2B85408A00D55F06 /* URLSessionService.swift */,
 				A31EF4952B853EC700D55F06 /* MMOBomb */,
+				A3BB8B9D2B86BF9900057712 /* MTG */,
 			);
-			path = Services;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A3BB8B9D2B86BF9900057712 /* MTG */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */,
+				A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */,
+				A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */,
+				A3BB8BB12B86CC7700057712 /* Responses */,
+			);
+			path = MTG;
+			sourceTree = "<group>";
+		};
+		A3BB8BB02B86CC7000057712 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */,
+				A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		A3BB8BB12B86CC7700057712 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				A3BB8BA62B86C49F00057712 /* GetAllCardsResponse.swift */,
+				A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,14 +247,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */,
+				A3BB8BAF2B86C80700057712 /* Constants.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
 				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
+				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
+				A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */,
+				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
+				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,
 				A31EF49B2B853F5200D55F06 /* URLRequestable.swift in Sources */,
-				A32EAAC52B851906003ED411 /* MMOBombApiService.swift in Sources */,
+				A3BB8BA42B86C36F00057712 /* Card.swift in Sources */,
+				A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */,
+				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
+				A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */,
 				A31EF4992B853F1600D55F06 /* MMOBombEndpoint.swift in Sources */,
 				A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */,
 			);
