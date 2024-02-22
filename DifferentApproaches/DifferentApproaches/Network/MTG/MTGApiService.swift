@@ -30,22 +30,12 @@ class MTGApiServiceImpl: MTGApiService {
     }
     
     func getAllCards() async throws -> [Card] {
-        let result = try await httpService.performRequest(MTGEndpoint.getAllCards)
-        switch result {
-        case .success(let data):
-            return try responseParser.parseGetAllCardsResponse(data: data)
-        case .failure(let error):
-            throw error
-        }
+        let data = try await httpService.performRequest(MTGEndpoint.getAllCards)
+        return try responseParser.parseGetAllCardsResponse(data: data)
     }
     
     func getCardById(_ id: Int) async throws -> Card {
-        let result = try await httpService.performRequest(MTGEndpoint.getCardDetails(id))
-        switch result {
-        case .success(let data):
-            return try responseParser.parseGetCardByIdResponse(data: data)
-        case .failure(let error):
-            throw error
-        }
+        let data = try await httpService.performRequest(MTGEndpoint.getCardDetails(id))
+        return try responseParser.parseGetCardByIdResponse(data: data)
     }
 }

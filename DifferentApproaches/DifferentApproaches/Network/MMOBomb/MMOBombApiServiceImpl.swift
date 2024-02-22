@@ -30,22 +30,12 @@ class MMOBombApiServiceImpl: MMOBombApiService {
     }
     
     func getAllGames() async throws -> [Game] {
-        let result = try await httpService.performRequest(MMOBombEndpoint.getAllGames)
-        switch result {
-        case .success(let data):
-            return try responseParser.parseGetAllGamesResponse(data: data)
-        case .failure(let error):
-            throw error
-        }
+        let data = try await httpService.performRequest(MMOBombEndpoint.getAllGames)
+        return try responseParser.parseGetAllGamesResponse(data: data)
     }
     
     func getGameById(_ id: Int) async throws -> GameDetailed {
-        let result = try await httpService.performRequest(MMOBombEndpoint.getGameDetails(id))
-        switch result {
-        case .success(let data):
-            return try responseParser.parseGetGameByIdResponse(data: data)
-        case .failure(let error):
-            throw error
-        }
+        let data = try await httpService.performRequest(MMOBombEndpoint.getGameDetails(id))
+        return try responseParser.parseGetGameByIdResponse(data: data)
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HTTPService {
-    func performRequest(_ request: URLRequestable) async throws -> Result<Data, Error>
+    func performRequest(_ request: URLRequestable) async throws -> Data
 }

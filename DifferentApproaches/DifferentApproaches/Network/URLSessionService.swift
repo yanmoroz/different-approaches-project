@@ -15,12 +15,12 @@ class URLSessionService: HTTPService {
         self.session = session
     }
     
-    func performRequest(_ request: URLRequestable) async throws -> Result<Data, Error> {
+    func performRequest(_ request: URLRequestable) async throws -> Data {
         let (data, response) = try await session.data(for: request.asURLRequest())
         if let response = response as? HTTPURLResponse, !(200..<300).contains(response.statusCode) {
-            return .failure(HTTPRequestError.status(response.statusCode))
+            throw HTTPRequestError.status(response.statusCode)
         }
-        return .success(data)
+        return data
     }
 }
 
