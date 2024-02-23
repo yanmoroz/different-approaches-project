@@ -11,6 +11,7 @@ protocol ViewInterface: AnyObject {
     func showError(_ error: Error)
 }
 
+// MARK: - Default Implementation
 extension ViewInterface {
     func showError(_ error: Error) {
         print(error.localizedDescription)

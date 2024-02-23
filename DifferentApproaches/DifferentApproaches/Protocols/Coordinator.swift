@@ -18,6 +18,7 @@ protocol Coordinator: AnyObject {
     func dismissViewController(animated: Bool, completion: (() -> Void)?)
 }
 
+// MARK: - Default Implementation
 extension Coordinator {
     
     func addChildCoordinator(_ coordinator: Coordinator) {

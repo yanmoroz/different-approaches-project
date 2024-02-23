@@ -7,12 +7,13 @@
 
 import UIKit
 
-
+// TODO: MOVE?
 protocol GamesFlowCoordinatorDelegate: AnyObject {
     
 }
 
-class GamesFlowCoordinator: Coordinator {
+// MARK: - GamesFlowCoordinator
+class GamesFlowCoordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -23,6 +24,7 @@ class GamesFlowCoordinator: Coordinator {
     }
 }
 
+// MARK: - Private Methods
 private extension GamesFlowCoordinator {
     
     func showGamesListScene() {
@@ -34,13 +36,15 @@ private extension GamesFlowCoordinator {
     }
 }
 
-extension GamesFlowCoordinator {
+// MARK: - Coordinator
+extension GamesFlowCoordinator: Coordinator {
     
     func start() {
         showGamesListScene()
     }
 }
 
+// MARK: - GamesListSceneDelegate
 extension GamesFlowCoordinator: GamesListSceneDelegate {
     
     func didSelectGame(_ game: Game) {
@@ -48,6 +52,7 @@ extension GamesFlowCoordinator: GamesListSceneDelegate {
     }
 }
 
+// MARK: - GameDetailsSceneDelegate
 extension GamesFlowCoordinator: GameDetailsSceneDelegate {
     
 }

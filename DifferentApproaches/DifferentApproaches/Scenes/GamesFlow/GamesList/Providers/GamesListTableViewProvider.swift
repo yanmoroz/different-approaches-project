@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO: MOVE?
 protocol GamesListTableViewProviderDelegate: AnyObject {
     func didSelectGame(at index: Int)
 }
@@ -17,6 +18,7 @@ final class GamesListTableViewProvider: NSObject {
     weak var delegate: GamesListTableViewProviderDelegate?
 }
 
+// MARK: - TableViewProvider
 extension GamesListTableViewProvider: TableViewProvider {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

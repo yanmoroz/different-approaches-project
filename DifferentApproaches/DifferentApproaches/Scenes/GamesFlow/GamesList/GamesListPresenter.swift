@@ -42,6 +42,7 @@ final class GamesListPresenter {
     }
 }
 
+// MARK: - Private Methods
 private extension GamesListPresenter {
     
     func fetchAllGames() {
@@ -80,6 +81,7 @@ private extension GamesListPresenter {
     }
 }
 
+// MARK: - GamesListTableViewProviderDelegate
 extension GamesListPresenter: GamesListTableViewProviderDelegate {
     
     func didSelectGame(at index: Int) {
@@ -88,6 +90,7 @@ extension GamesListPresenter: GamesListTableViewProviderDelegate {
     }
 }
 
+// MARK: - GamesListPresentation
 extension GamesListPresenter: GamesListPresentation {
     
     func viewDidLoad() {

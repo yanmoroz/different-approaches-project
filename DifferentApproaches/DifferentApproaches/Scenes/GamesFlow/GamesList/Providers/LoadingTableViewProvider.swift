@@ -27,6 +27,7 @@ final class LoadingTableViewProvider: NSObject {
     }
 }
 
+// MARK: - TableViewProvider
 extension LoadingTableViewProvider: TableViewProvider {
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -22,6 +22,7 @@ struct Game: Identifiable {
     let profileUrl: URL
 }
 
+// MARK: - Casting Inits
 extension Game {
     
     init(response: GetAllGamesResponse.Game) {

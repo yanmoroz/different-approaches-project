@@ -36,6 +36,7 @@ final class GameDetailsPresenter {
     }
 }
 
+// MARK: - Private Methods
 private extension GameDetailsPresenter {
     
     func fetchGameById(_ id: Int) {
@@ -54,13 +55,14 @@ private extension GameDetailsPresenter {
         case .loading:
             fetchGameById(gameId)
         case .loadSucceed(let game):
-            break // TODO
+            break // TODO: ACTION?
         case .loadFailed(let error):
             view?.showError(error)
         }
     }
 }
 
+// MARK: - GameDetailsPresentation
 extension GameDetailsPresenter: GameDetailsPresentation {
     
     func viewDidLoad() {

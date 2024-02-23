@@ -41,7 +41,9 @@ struct GameDetails: Identifiable {
     }
 }
 
+// MARK: - Casting Inits
 extension GameDetails {
+    
     init(response: GetGameByIdResponse) {
         id = response.id
         title = response.title
@@ -59,14 +61,18 @@ extension GameDetails {
         screenshots = response.screenshots.map(Screenshot.init)
         
         if let minimumSystemRequirements = response.minimumSystemRequirements {
-            self.minimumSystemRequirements = .init(minimumSystemRequirements: minimumSystemRequirements)
+            self.minimumSystemRequirements = MinimumSystemRequirements(
+                minimumSystemRequirements: minimumSystemRequirements
+            )
         } else {
             minimumSystemRequirements = nil
         }
     }
 }
 
+// MARK: - Casting Inits
 extension GameDetails.MinimumSystemRequirements {
+    
     init(minimumSystemRequirements: GetGameByIdResponse.MinimumSystemRequirements) {
         os = minimumSystemRequirements.os
         processor = minimumSystemRequirements.processor
@@ -76,7 +82,9 @@ extension GameDetails.MinimumSystemRequirements {
     }
 }
 
+// MARK: - Casting Inits
 extension GameDetails.Screenshot {
+    
     init(screenshot: GetGameByIdResponse.Screenshot) {
         id = screenshot.id
         image = screenshot.image

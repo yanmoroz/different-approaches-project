@@ -33,6 +33,16 @@ final class GameTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Public Methods
+extension GameTableViewCell {
+    
+    func setTitle(_ title: String, genre: String) {
+        titleLabel.text = title
+        genreLabel.text = genre
+    }
+}
+
+// MARK: - Private Methods
 private extension GameTableViewCell {
     
     func setupUI() {
@@ -49,13 +59,5 @@ private extension GameTableViewCell {
         genreLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
         genreLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
         genreLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
-    }
-}
-
-extension GameTableViewCell {
-    
-    func setTitle(_ title: String, genre: String) {
-        titleLabel.text = title
-        genreLabel.text = genre
     }
 }

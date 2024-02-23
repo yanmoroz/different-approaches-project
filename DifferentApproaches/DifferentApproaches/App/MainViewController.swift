@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - MainViewController
 final class MainViewController: UITabBarController {
     
     private lazy var coordinators: [Coordinator] = [
@@ -16,7 +17,6 @@ final class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewControllers = coordinators.map({ $0.navigationController })
     }
     
@@ -58,6 +58,7 @@ final class MainViewController: UITabBarController {
     }
 }
 
+// MARK: - Private Methods
 private extension MainViewController {
     
     func gamesTabCoordinator() -> GamesFlowCoordinator {

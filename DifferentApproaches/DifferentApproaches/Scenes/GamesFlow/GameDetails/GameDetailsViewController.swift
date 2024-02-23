@@ -22,6 +22,7 @@ final class GameDetailsViewController: UIViewController {
     }
 }
 
+// MARK: - GameDetailsViewInterface
 extension GameDetailsViewController: GameDetailsViewInterface {
     
 }

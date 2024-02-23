@@ -8,12 +8,13 @@
 import Foundation
 
 struct Card: Identifiable {
-    
+
     let id: UUID = UUID()
     let name: String
     let manaCost: String
 }
 
+// MARK: - Casting Inits
 extension Card {
     
     init(response: GetAllCardsResponse.Card) {

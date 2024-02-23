@@ -19,6 +19,12 @@ final class GameDetailsView: UIView {
     }
 }
 
+// MARK: - Public Methods
+extension GameDetailsView {
+    
+}
+
+// MARK: - Private Methods
 private extension GameDetailsView {
     
     func setupUI() {
@@ -28,8 +34,4 @@ private extension GameDetailsView {
     func setupConstraints() {
         backgroundColor = .systemBackground
     }
-}
-
-extension GameDetailsView {
-    
 }
