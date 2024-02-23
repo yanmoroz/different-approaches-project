@@ -15,3 +15,7 @@ protocol GamesListViewInterface: ViewInterface {
 protocol GamesListPresentation {
     func viewDidLoad()
 }
+
+protocol GamesListSceneDelegate: AnyObject {
+    func didSelectGame(_ game: Game)
+}

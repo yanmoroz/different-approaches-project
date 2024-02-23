@@ -9,6 +9,7 @@ import Foundation
 
 final class GamesListPresenter {
     
+    weak var delegate: GamesListSceneDelegate?
     private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
     private let loadingTableViewProvider = LoadingTableViewProvider()
@@ -24,6 +25,8 @@ final class GamesListPresenter {
             updateViewBaseOn(state: state)
         }
     }
+    
+    private var fetchedGames = [Game]()
     
     init(view: GamesListViewInterface,
          apiService: MMOBombApiService) {
@@ -58,6 +61,7 @@ private extension GamesListPresenter {
             setLoadingTableView()
             fetchAllGames()
         case .loadSucceed(let games):
+            fetchedGames = games
             gamesListTableViewProvider.games = games
             setGamesListTableView()
         case .loadFailed(let error):
@@ -79,7 +83,8 @@ private extension GamesListPresenter {
 extension GamesListPresenter: GamesListTableViewProviderDelegate {
     
     func didSelectGame(at index: Int) {
-        print(index)
+        let game = fetchedGames[index]
+        delegate?.didSelectGame(game)
     }
 }
 

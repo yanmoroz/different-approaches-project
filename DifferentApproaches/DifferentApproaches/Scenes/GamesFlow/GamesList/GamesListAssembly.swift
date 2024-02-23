@@ -9,9 +9,10 @@ import Foundation
 
 struct GamesListAssembly {
     
-    static func gamesList() -> GamesListViewController {
+    static func gamesList(delegate: GamesListSceneDelegate? = nil) -> GamesListViewController {
         let view = GamesListViewController()
         let presenter = GamesListPresenter(view: view, apiService: MMOBombApiServiceImpl())
+        presenter.delegate = delegate
         view.presenter = presenter
         return view
     }

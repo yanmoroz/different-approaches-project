@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Card {
+struct Card: Identifiable {
+    
+    let id: UUID = UUID()
     let name: String
     let manaCost: String
 }

@@ -30,6 +30,7 @@ final class GamesListView: UIView {
 private extension GamesListView {
     
     func setupUI() {
+        backgroundColor = .systemBackground
         addSubview(tableView)
         setupConstraints()
     }

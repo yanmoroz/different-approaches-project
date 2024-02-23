@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GameDetailed {
+struct GameDetailed: Identifiable {
     
     let id: Int
     let title: String
@@ -26,6 +26,7 @@ struct GameDetailed {
     let screenshots: [Screenshot]
     
     struct MinimumSystemRequirements {
+        
         let os: String
         let processor: String
         let memory: String
@@ -34,6 +35,7 @@ struct GameDetailed {
     }
     
     struct Screenshot {
+        
         let id: Int
         let image: URL
     }
