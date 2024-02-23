@@ -12,11 +12,25 @@ final class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = GamesListAssembly.gamesList()
-        let vc2 = GamesListViewController()
-        
         viewControllers = [
-            vc1, vc2
+            prepareGamesTab().navigationController,
+            prepareCardsTab().navigationController
         ]
+    }
+    
+    private func prepareGamesTab() -> GamesFlowCoordinator {
+        let gamesTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
+        let gamesTab = UITabBarItem(title: "Games", image: UIImage(systemName: "gamecontroller"), selectedImage: UIImage(systemName: "gamecontroller.fill"))
+        gamesTabCoordinator.navigationController.tabBarItem = gamesTab
+        gamesTabCoordinator.start()
+        return gamesTabCoordinator
+    }
+    
+    private func prepareCardsTab() -> GamesFlowCoordinator {
+        let cardsTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
+        let cardsTab = UITabBarItem(title: "Cards", image: UIImage(systemName: "menucard"), selectedImage: UIImage(systemName: "menucard.fill"))
+        cardsTabCoordinator.navigationController.tabBarItem = cardsTab
+        cardsTabCoordinator.start()
+        return cardsTabCoordinator
     }
 }
