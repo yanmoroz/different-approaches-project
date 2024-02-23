@@ -7,10 +7,12 @@
 
 import Foundation
 
-enum MTGEndpoint: URLRequestable {
-
+enum MTGEndpoint {
     case getAllCards
     case getCardDetails(Int)
+}
+
+extension MTGEndpoint: URLRequestable {
     
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
@@ -18,8 +20,11 @@ enum MTGEndpoint: URLRequestable {
         urlRequest.httpBody = getHttpBody()
         return urlRequest
     }
+}
+
+private extension MTGEndpoint {
     
-    private func getHttpBody() -> Data? {
+    func getHttpBody() -> Data? {
         let parameters: [String: Any]?
         
         switch self {
@@ -34,14 +39,14 @@ enum MTGEndpoint: URLRequestable {
         return try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
     }
     
-    private func getMethod() -> HTTPMethod {
+    func getMethod() -> HTTPMethod {
         switch self {
         case .getAllCards, .getCardDetails:
             return .get
         }
     }
     
-    private func getUrl() throws -> URL {
+    func getUrl() throws -> URL {
         let relativePath: String
         
         switch self {
@@ -58,7 +63,7 @@ enum MTGEndpoint: URLRequestable {
         return baseUrl.appendingPathComponent(relativePath)
     }
     
-    private enum Constants {
+    enum Constants {
         static let magicTheGatheringBaseUrl = "https://api.magicthegathering.io/v1"
     }
 }

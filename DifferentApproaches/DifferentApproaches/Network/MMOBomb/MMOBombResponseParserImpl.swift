@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MMOBombResponseParserImpl: MMOBombResponseParser {
+final class MMOBombResponseParserImpl {
     
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -21,14 +21,17 @@ final class MMOBombResponseParserImpl: MMOBombResponseParser {
         }()
         return decoder
     }()
+}
+
+extension MMOBombResponseParserImpl: MMOBombResponseParser {
     
     func parseGetAllGamesResponse(data: Data) throws -> [Game] {
         let parsedResponse = try decoder.decode(GetAllGamesResponse.self, from: data)
         return parsedResponse.games.map(Game.init)
     }
     
-    func parseGetGameByIdResponse(data: Data) throws -> GameDetailed {
+    func parseGetGameByIdResponse(data: Data) throws -> GameDetails {
         let parsedResponse = try decoder.decode(GetGameByIdResponse.self, from: data)
-        return GameDetailed(response: parsedResponse)
+        return GameDetails(response: parsedResponse)
     }
 }

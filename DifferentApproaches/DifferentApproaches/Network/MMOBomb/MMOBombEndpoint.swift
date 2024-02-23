@@ -7,10 +7,12 @@
 
 import Foundation
 
-enum MMOBombEndpoint: URLRequestable {
-    
+enum MMOBombEndpoint {
     case getAllGames
     case getGameDetails(Int)
+}
+
+extension MMOBombEndpoint: URLRequestable {
     
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
@@ -18,8 +20,11 @@ enum MMOBombEndpoint: URLRequestable {
         urlRequest.httpBody = getHttpBody()
         return urlRequest
     }
+}
+
+private extension MMOBombEndpoint {
     
-    private func getHttpBody() -> Data? {
+    func getHttpBody() -> Data? {
         let parameters: [String: Any]?
         
         switch self {
@@ -34,14 +39,14 @@ enum MMOBombEndpoint: URLRequestable {
         return try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
     }
     
-    private func getMethod() -> HTTPMethod {
+    func getMethod() -> HTTPMethod {
         switch self {
         case .getAllGames, .getGameDetails:
             return .get
         }
     }
     
-    private func getUrl() throws -> URL {
+    func getUrl() throws -> URL {
         let relativePath: String
         var queryItems: [URLQueryItem] = []
         
@@ -61,7 +66,7 @@ enum MMOBombEndpoint: URLRequestable {
             .appending(queryItems: queryItems)
     }
     
-    private enum Constants {
+    enum Constants {
         static let mmoBombBaseUrl = "https://www.mmobomb.com/api1"
     }
 }

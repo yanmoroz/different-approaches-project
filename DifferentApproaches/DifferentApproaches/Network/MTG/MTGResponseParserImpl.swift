@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MTGResponseParserImpl: MTGResponseParser {
+final class MTGResponseParserImpl {
     
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -20,6 +20,9 @@ final class MTGResponseParserImpl: MTGResponseParser {
         }()
         return decoder
     }()
+}
+
+extension MTGResponseParserImpl: MTGResponseParser {
     
     func parseGetAllCardsResponse(data: Data) throws -> [Card] {
         let parsedResponse = try decoder.decode(GetAllCardsResponse.self, from: data)

@@ -31,7 +31,7 @@ final class GameDetailsPresenter {
     
     fileprivate enum ViewState {
         case loading
-        case loadSucceed(GameDetailed)
+        case loadSucceed(GameDetails)
         case loadFailed(Error)
     }
 }

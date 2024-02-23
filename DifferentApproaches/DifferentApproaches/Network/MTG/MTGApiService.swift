@@ -17,7 +17,7 @@ protocol MTGApiService {
     func getCardById(_ id: Int) async throws -> Card
 }
 
-final class MTGApiServiceImpl: MTGApiService {
+final class MTGApiServiceImpl {
     
     private let httpService: HTTPService
     private let responseParser: MTGResponseParser
@@ -28,6 +28,9 @@ final class MTGApiServiceImpl: MTGApiService {
         self.httpService = httpService
         self.responseParser = responseParser
     }
+}
+
+extension MTGApiServiceImpl: MTGApiService {
     
     func getAllCards() async throws -> [Card] {
         let data = try await httpService.performRequest(MTGEndpoint.getAllCards)

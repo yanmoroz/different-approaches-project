@@ -1,5 +1,5 @@
 //
-//  GameDetailed.swift
+//  GameDetails.swift
 //  DifferentApproaches
 //
 //  Created by Yan Moroz on 21.02.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GameDetailed: Identifiable {
+struct GameDetails: Identifiable {
     
     let id: Int
     let title: String
@@ -41,7 +41,7 @@ struct GameDetailed: Identifiable {
     }
 }
 
-extension GameDetailed {
+extension GameDetails {
     init(response: GetGameByIdResponse) {
         id = response.id
         title = response.title
@@ -66,7 +66,7 @@ extension GameDetailed {
     }
 }
 
-extension GameDetailed.MinimumSystemRequirements {
+extension GameDetails.MinimumSystemRequirements {
     init(minimumSystemRequirements: GetGameByIdResponse.MinimumSystemRequirements) {
         os = minimumSystemRequirements.os
         processor = minimumSystemRequirements.processor
@@ -76,7 +76,7 @@ extension GameDetailed.MinimumSystemRequirements {
     }
 }
 
-extension GameDetailed.Screenshot {
+extension GameDetails.Screenshot {
     init(screenshot: GetGameByIdResponse.Screenshot) {
         id = screenshot.id
         image = screenshot.image

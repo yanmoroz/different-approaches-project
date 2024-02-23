@@ -15,7 +15,7 @@
 		A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */; };
 		A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */; };
 		A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */; };
-		A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A92B858DE100D55F06 /* GameDetailed.swift */; };
+		A31EF4AA2B858DE100D55F06 /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EF4A92B858DE100D55F06 /* GameDetails.swift */; };
 		A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */; };
 		A32EAAB62B8507A1003ED411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB52B8507A1003ED411 /* Assets.xcassets */; };
 		A32EAAB92B8507A1003ED411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB72B8507A1003ED411 /* LaunchScreen.storyboard */; };
@@ -61,7 +61,7 @@
 		A31EF4A22B8544BB00D55F06 /* GetAllGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGamesResponse.swift; sourceTree = "<group>"; };
 		A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombResponseParserImpl.swift; sourceTree = "<group>"; };
 		A31EF4A72B8588B200D55F06 /* GetGameByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGameByIdResponse.swift; sourceTree = "<group>"; };
-		A31EF4A92B858DE100D55F06 /* GameDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailed.swift; sourceTree = "<group>"; };
+		A31EF4A92B858DE100D55F06 /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 		A32EAAA92B8507A0003ED411 /* DifferentApproaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DifferentApproaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32EAAB52B8507A1003ED411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,10 +114,10 @@
 		A31EF4952B853EC700D55F06 /* MMOBomb */ = {
 			isa = PBXGroup;
 			children = (
-				A3BB8BB02B86CC7000057712 /* Responses */,
 				A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */,
 				A31EF4982B853F1600D55F06 /* MMOBombEndpoint.swift */,
 				A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */,
+				A3BB8BB02B86CC7000057712 /* Responses */,
 			);
 			path = MMOBomb;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			children = (
 				A3BB8BA32B86C36F00057712 /* Card.swift */,
 				A31EF49F2B85447600D55F06 /* Game.swift */,
-				A31EF4A92B858DE100D55F06 /* GameDetailed.swift */,
+				A31EF4A92B858DE100D55F06 /* GameDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,19 +158,19 @@
 				A32EAAC22B85189C003ED411 /* Network */,
 				A3CF2AE92B8809B4005E4F7C /* Protocols */,
 				A3CF2AF32B8907F8005E4F7C /* Scenes */,
-				A32EAAC02B851173003ED411 /* SupportingFiles */,
+				A32EAAC02B851173003ED411 /* Supporting Files */,
 			);
 			path = DifferentApproaches;
 			sourceTree = "<group>";
 		};
-		A32EAAC02B851173003ED411 /* SupportingFiles */ = {
+		A32EAAC02B851173003ED411 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				A32EAABA2B8507A1003ED411 /* Info.plist */,
 				A32EAAB52B8507A1003ED411 /* Assets.xcassets */,
 				A32EAAB72B8507A1003ED411 /* LaunchScreen.storyboard */,
 			);
-			path = SupportingFiles;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A32EAAC12B85123B003ED411 /* App */ = {
@@ -388,7 +388,7 @@
 				A3CF2AF82B89312A005E4F7C /* GameDetailsAssembly.swift in Sources */,
 				A3CF2AFE2B89313D005E4F7C /* GameDetailsView.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
-				A31EF4AA2B858DE100D55F06 /* GameDetailed.swift in Sources */,
+				A31EF4AA2B858DE100D55F06 /* GameDetails.swift in Sources */,
 				A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */,
 				A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
@@ -570,7 +570,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF5X2BH93G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DifferentApproaches/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "DifferentApproaches/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Different Approaches";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -599,7 +599,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF5X2BH93G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DifferentApproaches/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "DifferentApproaches/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
