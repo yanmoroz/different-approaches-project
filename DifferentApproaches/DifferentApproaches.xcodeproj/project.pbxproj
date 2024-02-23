@@ -147,8 +147,8 @@
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
 				A3CF2AE92B8809B4005E4F7C /* Protocols */,
+				A3CF2AF32B8907F8005E4F7C /* Scenes */,
 				A32EAAC02B851173003ED411 /* SupportingFiles */,
-				A3E469C22B86DAB400421B78 /* UI */,
 			);
 			path = DifferentApproaches;
 			sourceTree = "<group>";
@@ -167,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				A32EAAAC2B8507A0003ED411 /* AppDelegate.swift */,
+				A3E469C02B86D8E700421B78 /* MainViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -224,18 +225,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A3CF2ACE2B8774EE005E4F7C /* GamesList */ = {
-			isa = PBXGroup;
-			children = (
-				A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */,
-				A3CF2AD12B877731005E4F7C /* GamesListContract.swift */,
-				A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */,
-				A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */,
-				A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */,
-			);
-			path = GamesList;
-			sourceTree = "<group>";
-		};
 		A3CF2AE72B8806BD005E4F7C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,15 +261,34 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		A3E469C22B86DAB400421B78 /* UI */ = {
+		A3CF2AF32B8907F8005E4F7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A3E469C02B86D8E700421B78 /* MainViewController.swift */,
+				A3CF2AF42B890805005E4F7C /* GamesFlow */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A3CF2AF42B890805005E4F7C /* GamesFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AF52B890813005E4F7C /* GamesList */,
+			);
+			path = GamesFlow;
+			sourceTree = "<group>";
+		};
+		A3CF2AF52B890813005E4F7C /* GamesList */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */,
+				A3CF2AD12B877731005E4F7C /* GamesListContract.swift */,
+				A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */,
+				A3CF2ACC2B8774CA005E4F7C /* GamesListView.swift */,
+				A3CF2ACA2B87748C005E4F7C /* GamesListViewController.swift */,
 				A3CF2AE72B8806BD005E4F7C /* Cells */,
-				A3CF2ACE2B8774EE005E4F7C /* GamesList */,
 				A3CF2AE82B8806E9005E4F7C /* Providers */,
 			);
-			path = UI;
+			path = GamesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
