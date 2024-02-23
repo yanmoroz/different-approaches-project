@@ -8,6 +8,7 @@
 import Foundation
 
 struct GamesListAssembly {
+    
     static func gamesList() -> GamesListViewController {
         let view = GamesListViewController()
         let presenter = GamesListPresenter(view: view, apiService: MMOBombApiServiceImpl())

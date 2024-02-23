@@ -31,8 +31,12 @@ final class GameTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+private extension GameTableViewCell {
     
-    private func setupUI() {
+    func setupUI() {
+        
         selectionStyle = .none
         contentView.addSubview(titleLabel)
         contentView.addSubview(genreLabel)
@@ -46,6 +50,9 @@ final class GameTableViewCell: UITableViewCell {
         genreLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
         genreLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8).isActive = true
     }
+}
+
+extension GameTableViewCell {
     
     func setTitle(_ title: String, genre: String) {
         titleLabel.text = title

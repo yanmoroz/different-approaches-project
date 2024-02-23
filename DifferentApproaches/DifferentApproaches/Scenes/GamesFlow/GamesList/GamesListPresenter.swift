@@ -32,17 +32,27 @@ final class GamesListPresenter {
         self.apiService = apiService
     }
     
-    private func setLoadingTableView() {
-        view?.setTableViewProvider(loadingTableViewProvider)
-        view?.reloadData()
+    fileprivate enum ViewState {
+        case loading
+        case loadSucceed([Game])
+        case loadFailed(Error)
+    }
+}
+
+private extension GamesListPresenter {
+    
+    func fetchAllGames() {
+        Task { @MainActor in
+            do {
+                let games = try await apiService.getAllGames()
+                state = .loadSucceed(games)
+            } catch {
+                state = .loadFailed(error)
+            }
+        }
     }
     
-    private func setGamesListTableView() {
-        view?.setTableViewProvider(gamesListTableViewProvider)
-        view?.reloadData()
-    }
-    
-    private func updateViewBaseOn(state: ViewState) {
+    func updateViewBaseOn(state: ViewState) {
         switch state {
         case .loading:
             setLoadingTableView()
@@ -55,25 +65,19 @@ final class GamesListPresenter {
         }
     }
     
-    private func fetchAllGames() {
-        Task { @MainActor in
-            do {
-                let games = try await apiService.getAllGames()
-                state = .loadSucceed(games)
-            } catch {
-                state = .loadFailed(error)
-            }
-        }
+    func setLoadingTableView() {
+        view?.setTableViewProvider(loadingTableViewProvider)
+        view?.reloadData()
     }
     
-    private enum ViewState {
-        case loading
-        case loadSucceed([Game])
-        case loadFailed(Error)
+    func setGamesListTableView() {
+        view?.setTableViewProvider(gamesListTableViewProvider)
+        view?.reloadData()
     }
 }
 
 extension GamesListPresenter: GamesListTableViewProviderDelegate {
+    
     func didSelectGame(at index: Int) {
         print(index)
     }

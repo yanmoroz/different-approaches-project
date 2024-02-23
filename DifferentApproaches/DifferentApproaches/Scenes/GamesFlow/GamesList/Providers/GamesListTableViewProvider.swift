@@ -11,10 +11,13 @@ protocol GamesListTableViewProviderDelegate: AnyObject {
     func didSelectGame(at index: Int)
 }
 
-final class GamesListTableViewProvider: NSObject, TableViewProvider {
+final class GamesListTableViewProvider: NSObject {
     
     var games = [Game]()
     weak var delegate: GamesListTableViewProviderDelegate?
+}
+
+extension GamesListTableViewProvider: TableViewProvider {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count

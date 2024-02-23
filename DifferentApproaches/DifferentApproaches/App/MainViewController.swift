@@ -17,8 +17,11 @@ final class MainViewController: UITabBarController {
             prepareCardsTab().navigationController
         ]
     }
+}
+
+private extension MainViewController {
     
-    private func prepareGamesTab() -> GamesFlowCoordinator {
+    func prepareGamesTab() -> GamesFlowCoordinator {
         let gamesTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
         let gamesTab = UITabBarItem(title: "Games", image: UIImage(systemName: "gamecontroller"), selectedImage: UIImage(systemName: "gamecontroller.fill"))
         gamesTabCoordinator.navigationController.tabBarItem = gamesTab
@@ -26,7 +29,7 @@ final class MainViewController: UITabBarController {
         return gamesTabCoordinator
     }
     
-    private func prepareCardsTab() -> GamesFlowCoordinator {
+    func prepareCardsTab() -> GamesFlowCoordinator {
         let cardsTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
         let cardsTab = UITabBarItem(title: "Cards", image: UIImage(systemName: "menucard"), selectedImage: UIImage(systemName: "menucard.fill"))
         cardsTabCoordinator.navigationController.tabBarItem = cardsTab

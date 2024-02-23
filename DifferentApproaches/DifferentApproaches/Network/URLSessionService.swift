@@ -15,18 +15,18 @@ final class URLSessionService: HTTPService {
         self.session = session
     }
     
+    private enum HTTPRequestError: Error {
+        case status(Int)
+    }
+}
+
+extension URLSessionService {
+    
     func performRequest(_ request: URLRequestable) async throws -> Data {
         let (data, response) = try await session.data(for: request.asURLRequest())
         if let response = response as? HTTPURLResponse, !(200..<300).contains(response.statusCode) {
             throw HTTPRequestError.status(response.statusCode)
         }
         return data
-    }
-}
-
-extension URLSessionService {
-    
-    enum HTTPRequestError: Error {
-        case status(Int)
     }
 }

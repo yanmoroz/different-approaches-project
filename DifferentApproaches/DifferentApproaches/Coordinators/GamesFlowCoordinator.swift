@@ -21,12 +21,18 @@ class GamesFlowCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+}
+
+private extension GamesFlowCoordinator {
+    
+    func showGamesListScene() {
+        navigationController.pushViewController(GamesListAssembly.gamesList(), animated: true)
+    }
+}
+
+extension GamesFlowCoordinator {
     
     func start() {
         showGamesListScene()
-    }
-    
-    private func showGamesListScene() {
-        navigationController.pushViewController(GamesListAssembly.gamesList(), animated: true)
     }
 }

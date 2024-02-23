@@ -8,6 +8,7 @@
 import OSLog
 
 extension Error {
+    
     func log() {
         Logger().error("\(self.localizedDescription)")
     }
