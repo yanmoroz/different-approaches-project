@@ -49,7 +49,7 @@ extension GamesListView {
         tableView.reloadData()
     }
     
-    func setTableViewProvider(_ provider: TableViewProvider) {
+    func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate) {
         tableView.delegate = provider
         tableView.dataSource = provider
     }

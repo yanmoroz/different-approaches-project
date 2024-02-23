@@ -20,8 +20,12 @@
 		A32EAAB62B8507A1003ED411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB52B8507A1003ED411 /* Assets.xcassets */; };
 		A32EAAB92B8507A1003ED411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAB72B8507A1003ED411 /* LaunchScreen.storyboard */; };
 		A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */; };
+		A37B7F672B896396009FBA17 /* MMOBombResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F662B896396009FBA17 /* MMOBombResponseParser.swift */; };
+		A37B7F6A2B89641E009FBA17 /* MMOBombApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */; };
+		A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */; };
+		A37B7F702B89651D009FBA17 /* MTGApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F6F2B89651D009FBA17 /* MTGApiService.swift */; };
 		A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */; };
-		A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */; };
+		A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */; };
 		A3BB8BA42B86C36F00057712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA32B86C36F00057712 /* Card.swift */; };
 		A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA62B86C49F00057712 /* GetAllCardsResponse.swift */; };
 		A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */; };
@@ -36,7 +40,6 @@
 		A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */; };
 		A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */; };
 		A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */; };
-		A3CF2ADC2B87E3ED005E4F7C /* TableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */; };
 		A3CF2ADE2B87E415005E4F7C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */; };
 		A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */; };
 		A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */; };
@@ -68,8 +71,12 @@
 		A32EAAB82B8507A1003ED411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A32EAABA2B8507A1003ED411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiServiceImpl.swift; sourceTree = "<group>"; };
+		A37B7F662B896396009FBA17 /* MMOBombResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombResponseParser.swift; sourceTree = "<group>"; };
+		A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiService.swift; sourceTree = "<group>"; };
+		A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParser.swift; sourceTree = "<group>"; };
+		A37B7F6F2B89651D009FBA17 /* MTGApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiService.swift; sourceTree = "<group>"; };
 		A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParserImpl.swift; sourceTree = "<group>"; };
-		A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiService.swift; sourceTree = "<group>"; };
+		A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiServiceImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA32B86C36F00057712 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A3BB8BA62B86C49F00057712 /* GetAllCardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCardsResponse.swift; sourceTree = "<group>"; };
 		A3BB8BA82B86C60500057712 /* GetCardByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByIdResponse.swift; sourceTree = "<group>"; };
@@ -84,7 +91,6 @@
 		A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListAssembly.swift; sourceTree = "<group>"; };
 		A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
-		A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListTableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,9 +120,9 @@
 		A31EF4952B853EC700D55F06 /* MMOBomb */ = {
 			isa = PBXGroup;
 			children = (
-				A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */,
 				A31EF4982B853F1600D55F06 /* MMOBombEndpoint.swift */,
-				A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */,
+				A37B7F682B896412009FBA17 /* ApiService */,
+				A37B7F652B89637D009FBA17 /* ResponseParser */,
 				A3BB8BB02B86CC7000057712 /* Responses */,
 			);
 			path = MMOBomb;
@@ -196,12 +202,48 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		A37B7F652B89637D009FBA17 /* ResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F662B896396009FBA17 /* MMOBombResponseParser.swift */,
+				A31EF4A52B85792600D55F06 /* MMOBombResponseParserImpl.swift */,
+			);
+			path = ResponseParser;
+			sourceTree = "<group>";
+		};
+		A37B7F682B896412009FBA17 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAAC42B851906003ED411 /* MMOBombApiServiceImpl.swift */,
+				A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		A37B7F6B2B896495009FBA17 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F6F2B89651D009FBA17 /* MTGApiService.swift */,
+				A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		A37B7F6C2B89649E009FBA17 /* ResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */,
+				A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */,
+			);
+			path = ResponseParser;
+			sourceTree = "<group>";
+		};
 		A3BB8B9D2B86BF9900057712 /* MTG */ = {
 			isa = PBXGroup;
 			children = (
-				A3BB8BA02B86BFEB00057712 /* MTGApiService.swift */,
 				A3BB8BAA2B86C67F00057712 /* MTGEndpoint.swift */,
-				A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */,
+				A37B7F6B2B896495009FBA17 /* ApiService */,
+				A37B7F6C2B89649E009FBA17 /* ResponseParser */,
 				A3BB8BB12B86CC7700057712 /* Responses */,
 			);
 			path = MTG;
@@ -249,7 +291,6 @@
 			children = (
 				A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */,
 				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
-				A3CF2ADB2B87E3ED005E4F7C /* TableViewProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -392,8 +433,9 @@
 				A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */,
 				A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
+				A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */,
 				A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */,
-				A3BB8BA12B86BFEB00057712 /* MTGApiService.swift in Sources */,
+				A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */,
 				A3CF2AF22B890581005E4F7C /* Coordinator.swift in Sources */,
 				A3CF2ACB2B87748C005E4F7C /* GamesListViewController.swift in Sources */,
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
@@ -404,7 +446,6 @@
 				A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */,
 				A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
-				A3CF2ADC2B87E3ED005E4F7C /* TableViewProvider.swift in Sources */,
 				A3CF2B002B893145005E4F7C /* GameDetailsViewController.swift in Sources */,
 				A3CF2AF02B88FC71005E4F7C /* GamesFlowCoordinator.swift in Sources */,
 				A3CF2ACD2B8774CA005E4F7C /* GamesListView.swift in Sources */,
@@ -417,13 +458,16 @@
 				A31EF49B2B853F5200D55F06 /* URLRequestable.swift in Sources */,
 				A3BB8BA42B86C36F00057712 /* Card.swift in Sources */,
 				A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */,
+				A37B7F702B89651D009FBA17 /* MTGApiService.swift in Sources */,
 				A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */,
 				A3CF2AEB2B8809BF005E4F7C /* ViewInterface.swift in Sources */,
 				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
+				A37B7F672B896396009FBA17 /* MMOBombResponseParser.swift in Sources */,
 				A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */,
 				A31EF4992B853F1600D55F06 /* MMOBombEndpoint.swift in Sources */,
 				A3CF2AFA2B893130005E4F7C /* GameDetailsContract.swift in Sources */,
 				A32EAAAD2B8507A0003ED411 /* AppDelegate.swift in Sources */,
+				A37B7F6A2B89641E009FBA17 /* MMOBombApiService.swift in Sources */,
 				A3CF2AD22B877731005E4F7C /* GamesListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,19 +7,19 @@
 
 import UIKit
 
-// TODO: MOVE?
-protocol GamesListTableViewProviderDelegate: AnyObject {
-    func didSelectGame(at index: Int)
-}
-
 final class GamesListTableViewProvider: NSObject {
     
     var games = [Game]()
     weak var delegate: GamesListTableViewProviderDelegate?
 }
 
-// MARK: - TableViewProvider
-extension GamesListTableViewProvider: TableViewProvider {
+// MARK: - GamesListTableViewProviderDelegate
+protocol GamesListTableViewProviderDelegate: AnyObject {
+    func didSelectGame(at index: Int)
+}
+
+// MARK: - UITableViewDataSource
+extension GamesListTableViewProvider: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count
@@ -34,6 +34,10 @@ extension GamesListTableViewProvider: TableViewProvider {
         cell.setTitle(viewModel.title, genre: viewModel.genre)
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+extension GamesListTableViewProvider: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelectGame(at: indexPath.row)

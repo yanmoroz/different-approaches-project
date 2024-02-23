@@ -5,11 +5,11 @@
 //  Created by Yan Moroz on 22.02.2024.
 //
 
-import Foundation
+import UIKit
 
 protocol GamesListViewInterface: ViewInterface {
     func reloadData()
-    func setTableViewProvider(_ provider: TableViewProvider)
+    func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate)
 }
 
 protocol GamesListPresentation {

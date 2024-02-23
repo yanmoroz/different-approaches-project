@@ -7,7 +7,6 @@
 
 import UIKit
 
-// MARK: - MainViewController
 final class MainViewController: UITabBarController {
     
     private lazy var coordinators: [Coordinator] = [

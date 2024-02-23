@@ -12,6 +12,7 @@ enum MTGEndpoint {
     case getCardDetails(Int)
 }
 
+// MARK: - URLRequestable
 extension MTGEndpoint: URLRequestable {
     
     func asURLRequest() throws -> URLRequest {
@@ -22,6 +23,7 @@ extension MTGEndpoint: URLRequestable {
     }
 }
 
+// MARK: - Private Methods
 private extension MTGEndpoint {
     
     func getHttpBody() -> Data? {

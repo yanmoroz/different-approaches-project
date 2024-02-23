@@ -12,6 +12,7 @@ enum MMOBombEndpoint {
     case getGameDetails(Int)
 }
 
+// MARK: - URLRequestable
 extension MMOBombEndpoint: URLRequestable {
     
     func asURLRequest() throws -> URLRequest {
@@ -22,6 +23,7 @@ extension MMOBombEndpoint: URLRequestable {
     }
 }
 
+// MARK: - Private Methods
 private extension MMOBombEndpoint {
     
     func getHttpBody() -> Data? {

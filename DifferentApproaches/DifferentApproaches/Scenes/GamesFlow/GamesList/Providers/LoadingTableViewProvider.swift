@@ -27,8 +27,8 @@ final class LoadingTableViewProvider: NSObject {
     }
 }
 
-// MARK: - TableViewProvider
-extension LoadingTableViewProvider: TableViewProvider {
+// MARK: - UITableViewDataSource
+extension LoadingTableViewProvider: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         configuration.numberOfSection
@@ -44,4 +44,9 @@ extension LoadingTableViewProvider: TableViewProvider {
         }
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+extension LoadingTableViewProvider: UITableViewDelegate {
+    
 }

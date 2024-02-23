@@ -7,16 +7,6 @@
 
 import Foundation
 
-protocol MTGResponseParser {
-    func parseGetAllCardsResponse(data: Data) throws -> [Card]
-    func parseGetCardByIdResponse(data: Data) throws -> Card
-}
-
-protocol MTGApiService {
-    func getAllCards() async throws -> [Card]
-    func getCardById(_ id: Int) async throws -> Card
-}
-
 final class MTGApiServiceImpl {
     
     private let httpService: HTTPService
@@ -30,6 +20,7 @@ final class MTGApiServiceImpl {
     }
 }
 
+// MARK: - MTGApiService
 extension MTGApiServiceImpl: MTGApiService {
     
     func getAllCards() async throws -> [Card] {

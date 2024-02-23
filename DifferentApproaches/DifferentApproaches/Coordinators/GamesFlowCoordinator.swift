@@ -7,12 +7,6 @@
 
 import UIKit
 
-// TODO: MOVE?
-protocol GamesFlowCoordinatorDelegate: AnyObject {
-    
-}
-
-// MARK: - GamesFlowCoordinator
 class GamesFlowCoordinator {
     
     var childCoordinators = [Coordinator]()
@@ -22,6 +16,11 @@ class GamesFlowCoordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+}
+
+// MARK: - GamesFlowCoordinatorDelegate
+protocol GamesFlowCoordinatorDelegate: AnyObject {
+    
 }
 
 // MARK: - Private Methods

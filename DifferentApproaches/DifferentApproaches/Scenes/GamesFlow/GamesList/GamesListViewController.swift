@@ -28,7 +28,7 @@ extension GamesListViewController: GamesListViewInterface {
         customView?.reloadTableView()
     }
     
-    func setTableViewProvider(_ provider: TableViewProvider) {
+    func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate) {
         customView?.setTableViewProvider(provider)
     }
 }

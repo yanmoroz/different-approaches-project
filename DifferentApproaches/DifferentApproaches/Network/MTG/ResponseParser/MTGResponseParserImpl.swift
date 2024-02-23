@@ -22,6 +22,7 @@ final class MTGResponseParserImpl {
     }()
 }
 
+// MARK: - MTGResponseParser
 extension MTGResponseParserImpl: MTGResponseParser {
     
     func parseGetAllCardsResponse(data: Data) throws -> [Card] {

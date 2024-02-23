@@ -23,6 +23,7 @@ final class MMOBombResponseParserImpl {
     }()
 }
 
+// MARK: - MMOBombResponseParser
 extension MMOBombResponseParserImpl: MMOBombResponseParser {
     
     func parseGetAllGamesResponse(data: Data) throws -> [Game] {

@@ -7,19 +7,6 @@
 
 import Foundation
 
-// MARK: - MMOBombResponseParser
-protocol MMOBombResponseParser {
-    func parseGetAllGamesResponse(data: Data) throws -> [Game]
-    func parseGetGameByIdResponse(data: Data) throws -> GameDetails
-}
-
-// MARK: - MMOBombApiService
-protocol MMOBombApiService {
-    func getAllGames() async throws -> [Game]
-    func getGameById(_ id: Int) async throws -> GameDetails
-}
-
-// MARK: - MMOBombApiServiceImpl
 final class MMOBombApiServiceImpl {
     
     private let httpService: HTTPService
@@ -33,6 +20,7 @@ final class MMOBombApiServiceImpl {
     }
 }
 
+// MARK: - MMOBombApiService
 extension MMOBombApiServiceImpl: MMOBombApiService {
     
     func getAllGames() async throws -> [Game] {
