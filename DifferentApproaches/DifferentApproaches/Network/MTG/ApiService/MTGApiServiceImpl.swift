@@ -12,8 +12,8 @@ final class MTGApiServiceImpl {
     private let httpService: HTTPService
     private let responseParser: MTGResponseParser
     
-    init(httpService: HTTPService = URLSessionService(),
-         responseParser: MTGResponseParser = MTGResponseParserImpl()) {
+    init(httpService: HTTPService,
+         responseParser: MTGResponseParser) {
         
         self.httpService = httpService
         self.responseParser = responseParser

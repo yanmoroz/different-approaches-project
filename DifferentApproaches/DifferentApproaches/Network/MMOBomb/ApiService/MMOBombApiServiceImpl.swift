@@ -12,8 +12,8 @@ final class MMOBombApiServiceImpl {
     private let httpService: HTTPService
     private let responseParser: MMOBombResponseParser
     
-    init(httpService: HTTPService = URLSessionService(),
-         responseParser: MMOBombResponseParser = MMOBombResponseParserImpl()) {
+    init(httpService: HTTPService,
+         responseParser: MMOBombResponseParser) {
         
         self.httpService = httpService
         self.responseParser = responseParser
