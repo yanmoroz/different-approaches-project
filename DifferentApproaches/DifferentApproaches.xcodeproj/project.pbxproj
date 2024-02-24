@@ -53,8 +53,6 @@
 		A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */; };
 		A3CF2AD22B877731005E4F7C /* GamesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD12B877731005E4F7C /* GamesListContract.swift */; };
 		A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */; };
-		A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */; };
-		A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */; };
 		A3CF2ADE2B87E415005E4F7C /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */; };
 		A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */; };
 		A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */; };
@@ -119,8 +117,6 @@
 		A3CF2ACF2B877717005E4F7C /* GamesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListPresenter.swift; sourceTree = "<group>"; };
 		A3CF2AD12B877731005E4F7C /* GamesListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListContract.swift; sourceTree = "<group>"; };
 		A3CF2AD32B87773E005E4F7C /* GamesListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListAssembly.swift; sourceTree = "<group>"; };
-		A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewProvider.swift; sourceTree = "<group>"; };
-		A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListTableViewProvider.swift; sourceTree = "<group>"; };
 		A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -197,7 +193,6 @@
 				A3CF2AE92B8809B4005E4F7C /* Protocols */,
 				A3CF2AF32B8907F8005E4F7C /* Scenes */,
 				A32EAAC02B851173003ED411 /* Supporting Files */,
-				A37B7F822B897245009FBA17 /* Views */,
 			);
 			path = DifferentApproaches;
 			sourceTree = "<group>";
@@ -320,15 +315,6 @@
 				A37B7F852B8972F9009FBA17 /* CardsListTableViewProvider.swift */,
 			);
 			path = Providers;
-			sourceTree = "<group>";
-		};
-		A37B7F822B897245009FBA17 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */,
-				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A37B7F9A2B897C58009FBA17 /* Errors */ = {
@@ -549,7 +535,6 @@
 				A3CF2ACB2B87748C005E4F7C /* GamesListViewController.swift in Sources */,
 				A3BB8BA72B86C49F00057712 /* GetAllCardsResponse.swift in Sources */,
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
-				A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
 				A37B7F7D2B896FB1009FBA17 /* CardsListView.swift in Sources */,
 				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
@@ -574,7 +559,6 @@
 				A3BB8BA42B86C36F00057712 /* Card.swift in Sources */,
 				A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */,
 				A37B7F702B89651D009FBA17 /* MTGApiService.swift in Sources */,
-				A3CF2ADA2B87E38A005E4F7C /* LoadingTableViewCell.swift in Sources */,
 				A3CF2AEB2B8809BF005E4F7C /* ViewInterface.swift in Sources */,
 				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
 				A37B7F672B896396009FBA17 /* MMOBombResponseParser.swift in Sources */,

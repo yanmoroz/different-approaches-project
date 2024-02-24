@@ -61,18 +61,20 @@ private enum Tab {
 private extension MainViewController {
     
     func gamesTabCoordinator() -> GamesFlowCoordinator {
-        let gamesTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
-        let gamesTab = Tab.games.tabBarItem
-        gamesTabCoordinator.navigationController.tabBarItem = gamesTab
-        gamesTabCoordinator.start()
-        return gamesTabCoordinator
+        let coordinator = GamesFlowCoordinator(navigationController: UINavigationController())
+        let tabItem = Tab.games.tabBarItem
+        coordinator.navigationController.navigationBar.prefersLargeTitles = true
+        coordinator.navigationController.tabBarItem = tabItem
+        coordinator.start()
+        return coordinator
     }
     
     func cardsTabprepareGamesTab() -> CardsFlowCoordinator {
-        let cardsTabCoordinator = CardsFlowCoordinator(navigationController: UINavigationController())
-        let cardsTab = Tab.cards.tabBarItem
-        cardsTabCoordinator.navigationController.tabBarItem = cardsTab
-        cardsTabCoordinator.start()
-        return cardsTabCoordinator
+        let coordinator = CardsFlowCoordinator(navigationController: UINavigationController())
+        let tabItem = Tab.cards.tabBarItem
+        coordinator.navigationController.navigationBar.prefersLargeTitles = true
+        coordinator.navigationController.tabBarItem = tabItem
+        coordinator.start()
+        return coordinator
     }
 }

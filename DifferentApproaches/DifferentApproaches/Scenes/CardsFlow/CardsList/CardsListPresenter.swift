@@ -12,7 +12,6 @@ final class CardsListPresenter {
     weak var delegate: CardsListSceneDelegate?
     private weak var view: CardsListViewInterface?
     private let apiService: MTGApiService
-    private let loadingTableViewProvider = LoadingTableViewProvider() // TODO: ???
     
     private lazy var cardsListTableViewProvider: CardsListTableViewProvider = {
         let provider = CardsListTableViewProvider()
@@ -59,7 +58,6 @@ private extension CardsListPresenter {
     func updateViewBaseOn(state: ViewState) {
         switch state {
         case .loading:
-            setLoadingTableView()
             fetchAllCards()
         case .loadSucceed(let cards):
             fetchedCards = cards
@@ -68,11 +66,6 @@ private extension CardsListPresenter {
         case .loadFailed(let error):
             view?.showError(error)
         }
-    }
-    
-    func setLoadingTableView() {
-        view?.setTableViewProvider(loadingTableViewProvider)
-        view?.reloadData()
     }
     
     func setCardsListTableView() {

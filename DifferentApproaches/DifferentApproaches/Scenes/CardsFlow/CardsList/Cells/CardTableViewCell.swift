@@ -20,6 +20,7 @@ final class CardTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .accent
         return label
     }()
     

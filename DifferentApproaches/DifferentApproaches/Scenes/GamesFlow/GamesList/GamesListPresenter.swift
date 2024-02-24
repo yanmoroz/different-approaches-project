@@ -12,7 +12,6 @@ final class GamesListPresenter {
     weak var delegate: GamesListSceneDelegate?
     private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
-    private let loadingTableViewProvider = LoadingTableViewProvider() // TODO: ???
     
     private lazy var gamesListTableViewProvider: GamesListTableViewProvider = {
         let provider = GamesListTableViewProvider()
@@ -20,7 +19,7 @@ final class GamesListPresenter {
         return provider
     }()
     
-    private var state = ViewState.loading {
+    private var state = ViewState.initialLoading {
         didSet {
             updateViewBaseOn(state: state)
         }
@@ -46,7 +45,7 @@ final class GamesListPresenter {
     }
     
     fileprivate enum ViewState {
-        case loading
+        case initialLoading
         case loadSucceed([Game])
         case loadFailed(Error)
     }
@@ -68,19 +67,20 @@ private extension GamesListPresenter {
     
     func updateViewBaseOn(state: ViewState) {
         switch state {
-        case .loading:
-            setLoadingTableView()
+        case .initialLoading:
             fetchAllGames()
+            toggleLoadingIndicator(visible: true)
         case .loadSucceed(let games):
             fetchedGames = games
+            toggleLoadingIndicator(visible: false)
         case .loadFailed(let error):
             view?.showError(error)
+            toggleLoadingIndicator(visible: false)
         }
     }
     
-    func setLoadingTableView() {
-        view?.setTableViewProvider(loadingTableViewProvider)
-        view?.reloadData()
+    func toggleLoadingIndicator(visible: Bool) {
+        view?.toggleLoadingIndicator(visible: visible)
     }
     
     func setGamesListTableView(games: [Game]) {
@@ -116,6 +116,6 @@ extension GamesListPresenter: GamesListPresentation {
     }
     
     func viewDidLoad() {
-        state = .loading
+        state = .initialLoading
     }
 }

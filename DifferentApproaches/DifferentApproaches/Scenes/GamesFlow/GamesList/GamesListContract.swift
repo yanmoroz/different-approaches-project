@@ -10,6 +10,7 @@ import UIKit
 protocol GamesListViewInterface: ViewInterface {
     func reloadData()
     func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate)
+    func toggleLoadingIndicator(visible: Bool)
 }
 
 protocol GamesListPresentation {

@@ -66,4 +66,8 @@ extension GamesListViewController: GamesListViewInterface {
     func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate) {
         customView?.setTableViewProvider(provider)
     }
+    
+    func toggleLoadingIndicator(visible: Bool) {
+        customView?.toggleLoadingIndicator(visible: visible)
+    }
 }

@@ -13,8 +13,17 @@ final class GamesListView: UIView {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(GameTableViewCell.self, forCellReuseIdentifier: GameTableViewCell.reuseIdentifier)
-        tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: LoadingTableViewCell.reuseIdentifier)
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableView.automaticDimension
         return tableView
+    }()
+    
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.color = .accent
+        return indicator
     }()
     
     override init(frame: CGRect) {
@@ -38,21 +47,34 @@ extension GamesListView {
         tableView.delegate = provider
         tableView.dataSource = provider
     }
+    
+    func toggleLoadingIndicator(visible: Bool) {
+        if visible {
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: - Private Methods
 private extension GamesListView {
     
     func setupUI() {
-        backgroundColor = .systemBackground
+        
         addSubview(tableView)
+        addSubview(loadingIndicator)
         setupConstraints()
     }
     
     func setupConstraints() {
+        
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }
