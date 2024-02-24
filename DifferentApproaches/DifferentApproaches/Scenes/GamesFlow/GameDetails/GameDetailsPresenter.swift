@@ -12,7 +12,7 @@ final class GameDetailsPresenter {
     weak var delegate: GameDetailsSceneDelegate?
     private weak var view: GameDetailsViewInterface?
     private let apiService: MMOBombApiService
-    private let gameId: Game.ID
+    private let game: Game
     
     private var state = ViewState.loading {
         didSet {
@@ -26,11 +26,11 @@ final class GameDetailsPresenter {
         }
     }
     
-    init(gameId: Game.ID,
+    init(game: Game,
          view: GameDetailsViewInterface,
          apiService: MMOBombApiService) {
         
-        self.gameId = gameId
+        self.game = game
         self.view = view
         self.apiService = apiService
     }
@@ -59,7 +59,7 @@ private extension GameDetailsPresenter {
     func updateViewBaseOn(state: ViewState) {
         switch state {
         case .loading:
-            fetchGameById(gameId)
+            fetchGameById(game.id)
         case .loadSucceed(let game):
             fetchedGame = game
         case .loadFailed(let error):
@@ -73,5 +73,6 @@ extension GameDetailsPresenter: GameDetailsPresentation {
     
     func viewDidLoad() {
         state = .loading
+        view?.setupUI(with: game)
     }
 }

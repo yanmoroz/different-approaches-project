@@ -9,10 +9,17 @@ import Foundation
 
 struct GameDetailsAssembly {
     
-    static func gameDetails(gameId: Game.ID, delegate: GameDetailsSceneDelegate? = nil) -> GameDetailsViewController {
+    static func gameDetails(game: Game, delegate: GameDetailsSceneDelegate? = nil) -> GameDetailsViewController {
         let view = GameDetailsViewController()
-        let apiService = MMOBombApiServiceImpl(httpService: URLSessionService(), responseParser: MMOBombResponseParserImpl())
-        let presenter = GameDetailsPresenter(gameId: gameId, view: view, apiService: apiService)
+        let apiService = MMOBombApiServiceImpl(
+            httpService: URLSessionService(),
+            responseParser: MMOBombResponseParserImpl()
+        )
+        let presenter = GameDetailsPresenter(
+            game: game,
+            view: view,
+            apiService: apiService
+        )
         presenter.delegate = delegate
         view.presenter = presenter
         return view

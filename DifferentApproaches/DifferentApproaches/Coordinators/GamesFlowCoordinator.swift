@@ -30,8 +30,8 @@ private extension GamesFlowCoordinator {
         navigationController.pushViewController(GamesListAssembly.gamesList(delegate: self), animated: true)
     }
     
-    func showGameDetailsScene(gameId: Game.ID) {
-        navigationController.pushViewController(GameDetailsAssembly.gameDetails(gameId: gameId, delegate: self), animated: true)
+    func showGameDetailsScene(game: Game) {
+        navigationController.pushViewController(GameDetailsAssembly.gameDetails(game: game, delegate: self), animated: true)
     }
 }
 
@@ -47,7 +47,7 @@ extension GamesFlowCoordinator: Coordinator {
 extension GamesFlowCoordinator: GamesListSceneDelegate {
     
     func didSelectGame(_ game: Game) {
-        showGameDetailsScene(gameId: game.id)
+        showGameDetailsScene(game: game)
     }
 }
 
