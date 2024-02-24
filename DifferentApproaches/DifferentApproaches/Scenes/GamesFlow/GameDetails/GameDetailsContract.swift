@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GameDetailsViewInterface: ViewInterface {
-    
+    func updateUI(with game: GameDetails?)
 }
 
 protocol GameDetailsPresentation {

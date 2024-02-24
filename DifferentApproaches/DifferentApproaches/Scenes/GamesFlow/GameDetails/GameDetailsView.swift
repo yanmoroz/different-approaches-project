@@ -9,6 +9,13 @@ import UIKit
 
 final class GameDetailsView: UIView {
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -21,17 +28,22 @@ final class GameDetailsView: UIView {
 
 // MARK: - Public Methods
 extension GameDetailsView {
-    
+    func update(with model: GameDetails?) {
+        titleLabel.text = model?.title
+    }
 }
 
 // MARK: - Private Methods
 private extension GameDetailsView {
     
     func setupUI() {
+        backgroundColor = .systemBackground
+        addSubview(titleLabel)
         setupConstraints()
     }
     
     func setupConstraints() {
-        backgroundColor = .systemBackground
+        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }

@@ -25,4 +25,7 @@ final class GameDetailsViewController: UIViewController {
 // MARK: - GameDetailsViewInterface
 extension GameDetailsViewController: GameDetailsViewInterface {
     
+    func updateUI(with game: GameDetails?) {
+        customView?.update(with: game)
+    }
 }

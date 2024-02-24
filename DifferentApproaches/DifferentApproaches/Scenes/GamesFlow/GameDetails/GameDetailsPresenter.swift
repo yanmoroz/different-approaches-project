@@ -20,6 +20,12 @@ final class GameDetailsPresenter {
         }
     }
     
+    private var fetchedGame: GameDetails? {
+        didSet {
+            view?.updateUI(with: fetchedGame)
+        }
+    }
+    
     init(gameId: Game.ID,
          view: GameDetailsViewInterface,
          apiService: MMOBombApiService) {
@@ -55,7 +61,7 @@ private extension GameDetailsPresenter {
         case .loading:
             fetchGameById(gameId)
         case .loadSucceed(let game):
-            break // TODO: ACTION?
+            fetchedGame = game
         case .loadFailed(let error):
             view?.showError(error)
         }
