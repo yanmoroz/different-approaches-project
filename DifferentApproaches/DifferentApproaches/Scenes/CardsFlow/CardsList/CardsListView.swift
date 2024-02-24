@@ -1,18 +1,18 @@
 //
-//  GamesListView.swift
+//  CardsListView.swift
 //  DifferentApproaches
 //
-//  Created by Yan Moroz on 22.02.2024.
+//  Created by Yan Moroz on 24.02.2024.
 //
 
 import UIKit
 
-final class GamesListView: UIView {
+final class CardsListView: UIView {
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(GameTableViewCell.self, forCellReuseIdentifier: GameTableViewCell.reuseIdentifier)
+        tableView.register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.reuseIdentifier)
         tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: LoadingTableViewCell.reuseIdentifier)
         return tableView
     }()
@@ -28,7 +28,7 @@ final class GamesListView: UIView {
 }
 
 // MARK: - Public Methods
-extension GamesListView {
+extension CardsListView {
     
     func reloadTableView() {
         tableView.reloadData()
@@ -41,7 +41,7 @@ extension GamesListView {
 }
 
 // MARK: - Private Methods
-private extension GamesListView {
+private extension CardsListView {
     
     func setupUI() {
         backgroundColor = .systemBackground

@@ -27,11 +27,11 @@ extension MTGResponseParserImpl: MTGResponseParser {
     
     func parseGetAllCardsResponse(data: Data) throws -> [Card] {
         let parsedResponse = try decoder.decode(GetAllCardsResponse.self, from: data)
-        return parsedResponse.cards.map(Card.init)
+        return parsedResponse.cards.compactMap { try? Card(response: $0) }
     }
     
-    func parseGetCardByIdResponse(data: Data) throws -> Card {
+    func parseGetCardByIdResponse(data: Data) throws -> CardDetails {
         let parsedResponse = try decoder.decode(GetCardByIdResponse.self, from: data)
-        return Card(response: parsedResponse.card)
+        return CardDetails(response: parsedResponse.card)
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 protocol MTGResponseParser {
     func parseGetAllCardsResponse(data: Data) throws -> [Card]
-    func parseGetCardByIdResponse(data: Data) throws -> Card
+    func parseGetCardByIdResponse(data: Data) throws -> CardDetails
 }

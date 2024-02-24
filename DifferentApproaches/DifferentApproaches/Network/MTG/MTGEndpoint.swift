@@ -9,7 +9,7 @@ import Foundation
 
 enum MTGEndpoint {
     case getAllCards
-    case getCardDetails(Int)
+    case getCardDetails(String)
 }
 
 // MARK: - URLRequestable

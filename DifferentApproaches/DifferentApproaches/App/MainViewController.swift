@@ -18,42 +18,42 @@ final class MainViewController: UITabBarController {
         super.viewDidLoad()
         viewControllers = coordinators.map({ $0.navigationController })
     }
+}
+
+private enum Tab {
     
-    private enum Tab {
-        
-        case games
-        case cards
-        
-        var title: String {
-            switch self {
-            case .games:
-                return "Games"
-            case .cards:
-                return "Cards"
-            }
+    case games
+    case cards
+    
+    var title: String {
+        switch self {
+        case .games:
+            return "Games"
+        case .cards:
+            return "Cards"
         }
-        
-        var image: UIImage? {
-            switch self {
-            case .games:
-                return UIImage(systemName: "gamecontroller")
-            case .cards:
-                return UIImage(systemName: "menucard")
-            }
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .games:
+            return UIImage(systemName: "gamecontroller")
+        case .cards:
+            return UIImage(systemName: "menucard")
         }
-        
-        var selectedImage: UIImage? {
-            switch self {
-            case .games:
-                return UIImage(systemName: "gamecontroller.fill")
-            case .cards:
-                return UIImage(systemName: "menucard.fill")
-            }
+    }
+    
+    var selectedImage: UIImage? {
+        switch self {
+        case .games:
+            return UIImage(systemName: "gamecontroller.fill")
+        case .cards:
+            return UIImage(systemName: "menucard.fill")
         }
-        
-        var tabBarItem: UITabBarItem {
-            return UITabBarItem(title: title, image: image, selectedImage: selectedImage)
-        }
+    }
+    
+    var tabBarItem: UITabBarItem {
+        return UITabBarItem(title: title, image: image, selectedImage: selectedImage)
     }
 }
 
@@ -68,8 +68,8 @@ private extension MainViewController {
         return gamesTabCoordinator
     }
     
-    func cardsTabprepareGamesTab() -> GamesFlowCoordinator {
-        let cardsTabCoordinator = GamesFlowCoordinator(navigationController: UINavigationController())
+    func cardsTabprepareGamesTab() -> CardsFlowCoordinator {
+        let cardsTabCoordinator = CardsFlowCoordinator(navigationController: UINavigationController())
         let cardsTab = Tab.cards.tabBarItem
         cardsTabCoordinator.navigationController.tabBarItem = cardsTab
         cardsTabCoordinator.start()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GamesFlowCoordinator {
+class GamesFlowCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -36,7 +36,7 @@ private extension GamesFlowCoordinator {
 }
 
 // MARK: - Coordinator
-extension GamesFlowCoordinator: Coordinator {
+extension GamesFlowCoordinator {
     
     func start() {
         showGamesListScene()

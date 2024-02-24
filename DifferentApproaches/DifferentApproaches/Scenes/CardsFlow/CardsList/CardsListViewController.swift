@@ -1,19 +1,19 @@
 //
-//  GamesListViewController.swift
+//  CardsListViewController.swift
 //  DifferentApproaches
 //
-//  Created by Yan Moroz on 22.02.2024.
+//  Created by Yan Moroz on 24.02.2024.
 //
 
 import UIKit
 
-final class GamesListViewController: UIViewController {
+final class CardsListViewController: UIViewController {
     
-    private lazy var customView = view as? GamesListView
-    var presenter: GamesListPresentation?
+    private lazy var customView = view as? CardsListView
+    var presenter: CardsListPresentation?
     
     override func loadView() {
-        view = GamesListView()
+        view = CardsListView()
     }
     
     override func viewDidLoad() {
@@ -22,8 +22,8 @@ final class GamesListViewController: UIViewController {
     }
 }
 
-// MARK: - GamesListViewInterface
-extension GamesListViewController: GamesListViewInterface {
+// MARK: - CardsListViewInterface
+extension CardsListViewController: CardsListViewInterface {
  
     func reloadData() {
         customView?.reloadTableView()

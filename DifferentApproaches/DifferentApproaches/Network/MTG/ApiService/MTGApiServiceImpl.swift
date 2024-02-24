@@ -28,7 +28,7 @@ extension MTGApiServiceImpl: MTGApiService {
         return try responseParser.parseGetAllCardsResponse(data: data)
     }
     
-    func getCardById(_ id: Int) async throws -> Card {
+    func getCardById(_ id: String) async throws -> CardDetails {
         let data = try await httpService.performRequest(MTGEndpoint.getCardDetails(id))
         return try responseParser.parseGetCardByIdResponse(data: data)
     }

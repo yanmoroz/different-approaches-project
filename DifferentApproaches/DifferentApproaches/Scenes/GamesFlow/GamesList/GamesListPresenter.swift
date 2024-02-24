@@ -12,7 +12,7 @@ final class GamesListPresenter {
     weak var delegate: GamesListSceneDelegate?
     private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
-    private let loadingTableViewProvider = LoadingTableViewProvider()
+    private let loadingTableViewProvider = LoadingTableViewProvider() // TODO: ???
     
     private lazy var gamesListTableViewProvider: GamesListTableViewProvider = {
         let provider = GamesListTableViewProvider()

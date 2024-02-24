@@ -14,5 +14,6 @@ struct GetAllCardsResponse: Decodable {
     struct Card: Decodable {
         let name: String
         let manaCost: String
+        let multiverseid: String?
     }
 }

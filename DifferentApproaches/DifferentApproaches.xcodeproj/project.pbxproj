@@ -24,6 +24,20 @@
 		A37B7F6A2B89641E009FBA17 /* MMOBombApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */; };
 		A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */; };
 		A37B7F702B89651D009FBA17 /* MTGApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F6F2B89651D009FBA17 /* MTGApiService.swift */; };
+		A37B7F752B896EC7009FBA17 /* CardsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F742B896EC7009FBA17 /* CardsFlowCoordinator.swift */; };
+		A37B7F772B896F9F009FBA17 /* CardsListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F762B896F9F009FBA17 /* CardsListAssembly.swift */; };
+		A37B7F792B896FA7009FBA17 /* CardsListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F782B896FA7009FBA17 /* CardsListContract.swift */; };
+		A37B7F7B2B896FAD009FBA17 /* CardsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F7A2B896FAD009FBA17 /* CardsListPresenter.swift */; };
+		A37B7F7D2B896FB1009FBA17 /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F7C2B896FB1009FBA17 /* CardsListView.swift */; };
+		A37B7F7F2B896FB7009FBA17 /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F7E2B896FB7009FBA17 /* CardsListViewController.swift */; };
+		A37B7F842B897291009FBA17 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F832B897291009FBA17 /* CardTableViewCell.swift */; };
+		A37B7F862B8972F9009FBA17 /* CardsListTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F852B8972F9009FBA17 /* CardsListTableViewProvider.swift */; };
+		A37B7F882B8974F7009FBA17 /* CardDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F872B8974F7009FBA17 /* CardDetailsAssembly.swift */; };
+		A37B7F8A2B8974FD009FBA17 /* CardDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F892B8974FD009FBA17 /* CardDetailsContract.swift */; };
+		A37B7F8C2B897502009FBA17 /* CardDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8B2B897502009FBA17 /* CardDetailsPresenter.swift */; };
+		A37B7F8E2B897507009FBA17 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8D2B897507009FBA17 /* CardDetailsView.swift */; };
+		A37B7F902B89750C009FBA17 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */; };
+		A37B7F942B8975CA009FBA17 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F932B8975CA009FBA17 /* CardDetails.swift */; };
 		A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */; };
 		A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */; };
 		A3BB8BA42B86C36F00057712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA32B86C36F00057712 /* Card.swift */; };
@@ -75,6 +89,20 @@
 		A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiService.swift; sourceTree = "<group>"; };
 		A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParser.swift; sourceTree = "<group>"; };
 		A37B7F6F2B89651D009FBA17 /* MTGApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiService.swift; sourceTree = "<group>"; };
+		A37B7F742B896EC7009FBA17 /* CardsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFlowCoordinator.swift; sourceTree = "<group>"; };
+		A37B7F762B896F9F009FBA17 /* CardsListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListAssembly.swift; sourceTree = "<group>"; };
+		A37B7F782B896FA7009FBA17 /* CardsListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListContract.swift; sourceTree = "<group>"; };
+		A37B7F7A2B896FAD009FBA17 /* CardsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListPresenter.swift; sourceTree = "<group>"; };
+		A37B7F7C2B896FB1009FBA17 /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
+		A37B7F7E2B896FB7009FBA17 /* CardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
+		A37B7F832B897291009FBA17 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		A37B7F852B8972F9009FBA17 /* CardsListTableViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListTableViewProvider.swift; sourceTree = "<group>"; };
+		A37B7F872B8974F7009FBA17 /* CardDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsAssembly.swift; sourceTree = "<group>"; };
+		A37B7F892B8974FD009FBA17 /* CardDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsContract.swift; sourceTree = "<group>"; };
+		A37B7F8B2B897502009FBA17 /* CardDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsPresenter.swift; sourceTree = "<group>"; };
+		A37B7F8D2B897507009FBA17 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
+		A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		A37B7F932B8975CA009FBA17 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParserImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiServiceImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA32B86C36F00057712 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -132,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BB8BA32B86C36F00057712 /* Card.swift */,
+				A37B7F932B8975CA009FBA17 /* CardDetails.swift */,
 				A31EF49F2B85447600D55F06 /* Game.swift */,
 				A31EF4A92B858DE100D55F06 /* GameDetails.swift */,
 			);
@@ -165,6 +194,7 @@
 				A3CF2AE92B8809B4005E4F7C /* Protocols */,
 				A3CF2AF32B8907F8005E4F7C /* Scenes */,
 				A32EAAC02B851173003ED411 /* Supporting Files */,
+				A37B7F822B897245009FBA17 /* Views */,
 			);
 			path = DifferentApproaches;
 			sourceTree = "<group>";
@@ -238,6 +268,66 @@
 			path = ResponseParser;
 			sourceTree = "<group>";
 		};
+		A37B7F712B896EA3009FBA17 /* CardsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F732B896EAE009FBA17 /* CardDetails */,
+				A37B7F722B896EA9009FBA17 /* CardsList */,
+			);
+			path = CardsFlow;
+			sourceTree = "<group>";
+		};
+		A37B7F722B896EA9009FBA17 /* CardsList */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F762B896F9F009FBA17 /* CardsListAssembly.swift */,
+				A37B7F782B896FA7009FBA17 /* CardsListContract.swift */,
+				A37B7F7A2B896FAD009FBA17 /* CardsListPresenter.swift */,
+				A37B7F7C2B896FB1009FBA17 /* CardsListView.swift */,
+				A37B7F7E2B896FB7009FBA17 /* CardsListViewController.swift */,
+				A37B7F802B896FBF009FBA17 /* Cells */,
+				A37B7F812B896FC9009FBA17 /* Providers */,
+			);
+			path = CardsList;
+			sourceTree = "<group>";
+		};
+		A37B7F732B896EAE009FBA17 /* CardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F872B8974F7009FBA17 /* CardDetailsAssembly.swift */,
+				A37B7F892B8974FD009FBA17 /* CardDetailsContract.swift */,
+				A37B7F8B2B897502009FBA17 /* CardDetailsPresenter.swift */,
+				A37B7F8D2B897507009FBA17 /* CardDetailsView.swift */,
+				A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */,
+			);
+			path = CardDetails;
+			sourceTree = "<group>";
+		};
+		A37B7F802B896FBF009FBA17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F832B897291009FBA17 /* CardTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A37B7F812B896FC9009FBA17 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F852B8972F9009FBA17 /* CardsListTableViewProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		A37B7F822B897245009FBA17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */,
+				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A3BB8B9D2B86BF9900057712 /* MTG */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				A3CF2AE32B87E6A2005E4F7C /* GameTableViewCell.swift */,
-				A3CF2AD92B87E38A005E4F7C /* LoadingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -290,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				A3CF2AE12B87E52B005E4F7C /* GamesListTableViewProvider.swift */,
-				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -307,6 +395,7 @@
 		A3CF2AEC2B88F89E005E4F7C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				A37B7F742B896EC7009FBA17 /* CardsFlowCoordinator.swift */,
 				A3CF2AEF2B88FC71005E4F7C /* GamesFlowCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -315,6 +404,7 @@
 		A3CF2AF32B8907F8005E4F7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A37B7F712B896EA3009FBA17 /* CardsFlow */,
 				A3CF2AF42B890805005E4F7C /* GamesFlow */,
 			);
 			path = Scenes;
@@ -425,16 +515,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37B7F862B8972F9009FBA17 /* CardsListTableViewProvider.swift in Sources */,
+				A37B7F902B89750C009FBA17 /* CardDetailsViewController.swift in Sources */,
+				A37B7F7F2B896FB7009FBA17 /* CardsListViewController.swift in Sources */,
 				A31EF4A62B85792600D55F06 /* MMOBombResponseParserImpl.swift in Sources */,
+				A37B7F8E2B897507009FBA17 /* CardDetailsView.swift in Sources */,
 				A3CF2AF82B89312A005E4F7C /* GameDetailsAssembly.swift in Sources */,
+				A37B7F8A2B8974FD009FBA17 /* CardDetailsContract.swift in Sources */,
 				A3CF2AFE2B89313D005E4F7C /* GameDetailsView.swift in Sources */,
 				A31EF49D2B85408A00D55F06 /* URLSessionService.swift in Sources */,
+				A37B7F7B2B896FAD009FBA17 /* CardsListPresenter.swift in Sources */,
 				A31EF4AA2B858DE100D55F06 /* GameDetails.swift in Sources */,
 				A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */,
 				A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
+				A37B7F942B8975CA009FBA17 /* CardDetails.swift in Sources */,
 				A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */,
 				A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */,
+				A37B7F792B896FA7009FBA17 /* CardsListContract.swift in Sources */,
 				A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */,
 				A3CF2AF22B890581005E4F7C /* Coordinator.swift in Sources */,
 				A3CF2ACB2B87748C005E4F7C /* GamesListViewController.swift in Sources */,
@@ -442,15 +540,20 @@
 				A3BB8BA92B86C60500057712 /* GetCardByIdResponse.swift in Sources */,
 				A3CF2AD82B87E32B005E4F7C /* LoadingTableViewProvider.swift in Sources */,
 				A31EF4A32B8544BB00D55F06 /* GetAllGamesResponse.swift in Sources */,
+				A37B7F7D2B896FB1009FBA17 /* CardsListView.swift in Sources */,
 				A3BB8BB42B86CF6000057712 /* NetworkError.swift in Sources */,
+				A37B7F842B897291009FBA17 /* CardTableViewCell.swift in Sources */,
 				A3BB8BB72B86D37500057712 /* Error+Extension.swift in Sources */,
+				A37B7F752B896EC7009FBA17 /* CardsFlowCoordinator.swift in Sources */,
 				A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */,
+				A37B7F882B8974F7009FBA17 /* CardDetailsAssembly.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A3CF2B002B893145005E4F7C /* GameDetailsViewController.swift in Sources */,
 				A3CF2AF02B88FC71005E4F7C /* GamesFlowCoordinator.swift in Sources */,
 				A3CF2ACD2B8774CA005E4F7C /* GamesListView.swift in Sources */,
 				A3CF2ADE2B87E415005E4F7C /* UITableViewCell+Extension.swift in Sources */,
 				A3CF2AD42B87773E005E4F7C /* GamesListAssembly.swift in Sources */,
+				A37B7F8C2B897502009FBA17 /* CardDetailsPresenter.swift in Sources */,
 				A31EF4972B853EDC00D55F06 /* HTTPService.swift in Sources */,
 				A3CF2AE62B8800CB005E4F7C /* UITableView+Extension.swift in Sources */,
 				A31EF4A02B85447600D55F06 /* Game.swift in Sources */,
@@ -463,6 +566,7 @@
 				A3CF2AEB2B8809BF005E4F7C /* ViewInterface.swift in Sources */,
 				A3BB8BAD2B86C7A700057712 /* HTTPMethod.swift in Sources */,
 				A37B7F672B896396009FBA17 /* MMOBombResponseParser.swift in Sources */,
+				A37B7F772B896F9F009FBA17 /* CardsListAssembly.swift in Sources */,
 				A32EAAC52B851906003ED411 /* MMOBombApiServiceImpl.swift in Sources */,
 				A31EF4992B853F1600D55F06 /* MMOBombEndpoint.swift in Sources */,
 				A3CF2AFA2B893130005E4F7C /* GameDetailsContract.swift in Sources */,

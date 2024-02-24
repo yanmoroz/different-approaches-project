@@ -9,20 +9,24 @@ import Foundation
 
 struct Card: Identifiable {
 
-    let id: UUID = UUID()
+    let id: String
     let name: String
     let manaCost: String
+}
+
+enum CastError: Error { // TODO: Move
+    case missingId
 }
 
 // MARK: - Casting Inits
 extension Card {
     
-    init(response: GetAllCardsResponse.Card) {
-        name = response.name
-        manaCost = response.manaCost
-    }
-    
-    init(response: GetCardByIdResponse.Card) {
+    init(response: GetAllCardsResponse.Card) throws {
+        guard let multiverseId = response.multiverseid else {
+            throw CastError.missingId
+        }
+        
+        id = multiverseId
         name = response.name
         manaCost = response.manaCost
     }

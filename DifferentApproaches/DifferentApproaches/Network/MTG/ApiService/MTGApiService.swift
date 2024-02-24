@@ -9,5 +9,5 @@ import Foundation
 
 protocol MTGApiService {
     func getAllCards() async throws -> [Card]
-    func getCardById(_ id: Int) async throws -> Card
+    func getCardById(_ id: String) async throws -> CardDetails
 }
