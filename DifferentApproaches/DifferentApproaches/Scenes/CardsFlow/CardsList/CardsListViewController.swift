@@ -9,17 +9,29 @@ import UIKit
 
 final class CardsListViewController: UIViewController {
     
-    private lazy var customView = view as? CardsListView
     var presenter: CardsListPresentation?
+    private lazy var customView = view as? CardsListView
     
     override func loadView() {
-        view = CardsListView()
-        title = "Cards" // TODO:
+        setupUI()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+    }
+    
+    private struct Locals {
+        static let title = "Cards"
+    }
+}
+
+// MARK: - Private Methods
+private extension CardsListViewController {
+    
+    func setupUI() {
+        view = CardsListView()
+        title = Locals.title
     }
 }
 

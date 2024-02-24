@@ -14,14 +14,13 @@ final class GamesListViewController: UIViewController {
     private lazy var customView = view as? GamesListView
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "Find a game..." // TODO:
+        searchController.searchBar.placeholder = Locals.searchBarPlaceholder
         searchController.searchBar.isHidden = false
         searchController.searchResultsUpdater = self
         return searchController
     }()
     
     override func loadView() {
-        view = GamesListView()
         setupUI()
     }
     
@@ -29,13 +28,19 @@ final class GamesListViewController: UIViewController {
         super.viewDidLoad()
         presenter?.viewDidLoad()
     }
+    
+    private struct Locals {
+        static let title = "Games"
+        static let searchBarPlaceholder = "Find a game..."
+    }
 }
 
 // MARK: Private Methods
 private extension GamesListViewController {
     
-    private func setupUI() {
-        title = "Games" // TODO:
+    func setupUI() {
+        view = GamesListView()
+        title = Locals.title
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
