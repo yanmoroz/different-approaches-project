@@ -14,6 +14,7 @@ protocol GamesListViewInterface: ViewInterface {
 
 protocol GamesListPresentation {
     func viewDidLoad()
+    func searchQueryDidChange(_ query: String)
 }
 
 protocol GamesListSceneDelegate: AnyObject {

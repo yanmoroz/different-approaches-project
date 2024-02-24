@@ -191,7 +191,6 @@
 			children = (
 				A32EAAC12B85123B003ED411 /* App */,
 				A3CF2AEC2B88F89E005E4F7C /* Coordinators */,
-				A37B7F952B897BF5009FBA17 /* Errors */,
 				A3BB8BB52B86D35D00057712 /* Extensions */,
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
@@ -330,13 +329,6 @@
 				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A37B7F952B897BF5009FBA17 /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Errors;
 			sourceTree = "<group>";
 		};
 		A37B7F9A2B897C58009FBA17 /* Errors */ = {

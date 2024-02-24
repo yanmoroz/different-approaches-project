@@ -26,7 +26,17 @@ final class GamesListPresenter {
         }
     }
     
-    private var fetchedGames = [Game]()
+    private var fetchedGames = [Game]() {
+        willSet {
+            displayedGames = newValue
+        }
+    }
+    
+    private var displayedGames = [Game]() {
+        willSet {
+            setGamesListTableView(games: newValue)
+        }
+    }
     
     init(view: GamesListViewInterface,
          apiService: MMOBombApiService) {
@@ -63,8 +73,6 @@ private extension GamesListPresenter {
             fetchAllGames()
         case .loadSucceed(let games):
             fetchedGames = games
-            gamesListTableViewProvider.games = games
-            setGamesListTableView()
         case .loadFailed(let error):
             view?.showError(error)
         }
@@ -75,8 +83,13 @@ private extension GamesListPresenter {
         view?.reloadData()
     }
     
-    func setGamesListTableView() {
+    func setGamesListTableView(games: [Game]) {
         view?.setTableViewProvider(gamesListTableViewProvider)
+        updateGamesInView(games: games)
+    }
+    
+    func updateGamesInView(games: [Game]) {
+        gamesListTableViewProvider.games = games
         view?.reloadData()
     }
 }
@@ -92,6 +105,15 @@ extension GamesListPresenter: GamesListTableViewProviderDelegate {
 
 // MARK: - GamesListPresentation
 extension GamesListPresenter: GamesListPresentation {
+    
+    func searchQueryDidChange(_ query: String) {
+        guard query.count > 0 else {
+            displayedGames = fetchedGames
+            return
+        }
+        
+        displayedGames = fetchedGames.filter({ $0.title.contains(query)})
+    }
     
     func viewDidLoad() {
         state = .loading

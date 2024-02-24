@@ -9,11 +9,20 @@ import UIKit
 
 final class GamesListViewController: UIViewController {
     
-    private lazy var customView = view as? GamesListView
     var presenter: GamesListPresentation?
+    
+    private lazy var customView = view as? GamesListView
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "Find a game..." // TODO:
+        searchController.searchBar.isHidden = false
+        searchController.searchResultsUpdater = self
+        return searchController
+    }()
     
     override func loadView() {
         view = GamesListView()
+        setupUI()
     }
     
     override func viewDidLoad() {
@@ -22,9 +31,29 @@ final class GamesListViewController: UIViewController {
     }
 }
 
+// MARK: Private Methods
+private extension GamesListViewController {
+    
+    private func setupUI() {
+        title = "Games" // TODO:
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension GamesListViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        presenter?.searchQueryDidChange(text)
+    }
+    
+}
+
 // MARK: - GamesListViewInterface
 extension GamesListViewController: GamesListViewInterface {
- 
+    
     func reloadData() {
         customView?.reloadTableView()
     }

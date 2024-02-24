@@ -14,6 +14,7 @@ final class CardsListViewController: UIViewController {
     
     override func loadView() {
         view = CardsListView()
+        title = "Cards" // TODO:
     }
     
     override func viewDidLoad() {
