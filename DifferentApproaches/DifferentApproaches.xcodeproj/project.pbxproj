@@ -38,6 +38,7 @@
 		A37B7F8E2B897507009FBA17 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8D2B897507009FBA17 /* CardDetailsView.swift */; };
 		A37B7F902B89750C009FBA17 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */; };
 		A37B7F942B8975CA009FBA17 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F932B8975CA009FBA17 /* CardDetails.swift */; };
+		A37B7F992B897C35009FBA17 /* CastError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F982B897C35009FBA17 /* CastError.swift */; };
 		A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */; };
 		A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */; };
 		A3BB8BA42B86C36F00057712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA32B86C36F00057712 /* Card.swift */; };
@@ -103,6 +104,7 @@
 		A37B7F8D2B897507009FBA17 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 		A37B7F932B8975CA009FBA17 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
+		A37B7F982B897C35009FBA17 /* CastError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastError.swift; sourceTree = "<group>"; };
 		A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParserImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiServiceImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA32B86C36F00057712 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				A37B7F932B8975CA009FBA17 /* CardDetails.swift */,
 				A31EF49F2B85447600D55F06 /* Game.swift */,
 				A31EF4A92B858DE100D55F06 /* GameDetails.swift */,
+				A37B7F9A2B897C58009FBA17 /* Errors */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			children = (
 				A32EAAC12B85123B003ED411 /* App */,
 				A3CF2AEC2B88F89E005E4F7C /* Coordinators */,
+				A37B7F952B897BF5009FBA17 /* Errors */,
 				A3BB8BB52B86D35D00057712 /* Extensions */,
 				A31EF49E2B85445500D55F06 /* Models */,
 				A32EAAC22B85189C003ED411 /* Network */,
@@ -326,6 +330,21 @@
 				A3CF2AD72B87E32B005E4F7C /* LoadingTableViewProvider.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A37B7F952B897BF5009FBA17 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A37B7F9A2B897C58009FBA17 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A37B7F982B897C35009FBA17 /* CastError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		A3BB8B9D2B86BF9900057712 /* MTG */ = {
@@ -547,6 +566,7 @@
 				A37B7F752B896EC7009FBA17 /* CardsFlowCoordinator.swift in Sources */,
 				A3CF2AD02B877717005E4F7C /* GamesListPresenter.swift in Sources */,
 				A37B7F882B8974F7009FBA17 /* CardDetailsAssembly.swift in Sources */,
+				A37B7F992B897C35009FBA17 /* CastError.swift in Sources */,
 				A31EF4A82B8588B200D55F06 /* GetGameByIdResponse.swift in Sources */,
 				A3CF2B002B893145005E4F7C /* GameDetailsViewController.swift in Sources */,
 				A3CF2AF02B88FC71005E4F7C /* GamesFlowCoordinator.swift in Sources */,

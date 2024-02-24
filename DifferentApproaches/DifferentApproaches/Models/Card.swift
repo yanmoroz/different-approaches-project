@@ -14,10 +14,6 @@ struct Card: Identifiable {
     let manaCost: String
 }
 
-enum CastError: Error { // TODO: Move
-    case missingId
-}
-
 // MARK: - Casting Inits
 extension Card {
     
