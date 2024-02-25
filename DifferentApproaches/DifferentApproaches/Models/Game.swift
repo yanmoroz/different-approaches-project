@@ -8,7 +8,6 @@
 import Foundation
 
 struct Game: Identifiable {
-    
     let id: Int
     let title: String
     let thumbnail: URL
@@ -24,7 +23,6 @@ struct Game: Identifiable {
 
 // MARK: - Casting Inits
 extension Game {
-    
     init(response: GetAllGamesResponse.Game) {
         id = response.id
         title = response.title

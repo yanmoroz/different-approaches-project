@@ -20,7 +20,6 @@ protocol Coordinator: AnyObject {
 
 // MARK: - Default Implementation
 extension Coordinator {
-    
     func addChildCoordinator(_ coordinator: Coordinator) {
         if childCoordinators.first(where: { $0 === coordinator }) == nil {
             childCoordinators.append(coordinator)

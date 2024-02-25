@@ -8,13 +8,11 @@
 import Foundation
 
 final class MMOBombApiServiceImpl {
-    
     private let httpService: HTTPService
     private let responseParser: MMOBombResponseParser
     
     init(httpService: HTTPService,
          responseParser: MMOBombResponseParser) {
-        
         self.httpService = httpService
         self.responseParser = responseParser
     }
@@ -22,7 +20,6 @@ final class MMOBombApiServiceImpl {
 
 // MARK: - MMOBombApiService
 extension MMOBombApiServiceImpl: MMOBombApiService {
-    
     func getAllGames() async throws -> [Game] {
         let data = try await httpService.performRequest(MMOBombEndpoint.getAllGames)
         return try responseParser.parseGetAllGamesResponse(data: data)

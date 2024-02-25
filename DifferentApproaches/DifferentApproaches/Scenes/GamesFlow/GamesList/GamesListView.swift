@@ -8,7 +8,6 @@
 import UIKit
 
 final class GamesListView: UIView {
-    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +37,6 @@ final class GamesListView: UIView {
 
 // MARK: - Public Methods
 extension GamesListView {
-    
     func reloadTableView() {
         tableView.reloadData()
     }
@@ -59,16 +57,13 @@ extension GamesListView {
 
 // MARK: - Private Methods
 private extension GamesListView {
-    
     func setupUI() {
-        
         addSubview(tableView)
         addSubview(loadingIndicator)
         setupConstraints()
     }
     
     func setupConstraints() {
-        
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true

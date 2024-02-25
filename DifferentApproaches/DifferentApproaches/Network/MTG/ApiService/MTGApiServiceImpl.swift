@@ -8,13 +8,11 @@
 import Foundation
 
 final class MTGApiServiceImpl {
-    
     private let httpService: HTTPService
     private let responseParser: MTGResponseParser
     
     init(httpService: HTTPService,
          responseParser: MTGResponseParser) {
-        
         self.httpService = httpService
         self.responseParser = responseParser
     }
@@ -22,7 +20,6 @@ final class MTGApiServiceImpl {
 
 // MARK: - MTGApiService
 extension MTGApiServiceImpl: MTGApiService {
-    
     func getAllCards() async throws -> [Card] {
         let data = try await httpService.performRequest(MTGEndpoint.getAllCards)
         return try responseParser.parseGetAllCardsResponse(data: data)

@@ -14,7 +14,6 @@ enum MTGEndpoint {
 
 // MARK: - URLRequestable
 extension MTGEndpoint: URLRequestable {
-    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
@@ -25,7 +24,6 @@ extension MTGEndpoint: URLRequestable {
 
 // MARK: - Private Methods
 private extension MTGEndpoint {
-    
     func getHttpBody() -> Data? {
         let parameters: [String: Any]?
         

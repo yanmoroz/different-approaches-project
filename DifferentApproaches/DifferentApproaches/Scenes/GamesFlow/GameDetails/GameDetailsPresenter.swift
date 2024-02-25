@@ -14,7 +14,6 @@ private enum ViewState {
 }
 
 final class GameDetailsPresenter {
-    
     weak var delegate: GameDetailsSceneDelegate?
     private weak var view: GameDetailsViewInterface?
     private let apiService: MMOBombApiService
@@ -35,7 +34,6 @@ final class GameDetailsPresenter {
     init(game: Game,
          view: GameDetailsViewInterface,
          apiService: MMOBombApiService) {
-        
         self.game = game
         self.view = view
         self.apiService = apiService
@@ -44,7 +42,6 @@ final class GameDetailsPresenter {
 
 // MARK: - Private Methods
 private extension GameDetailsPresenter {
-    
     func fetchGameById(_ id: Int) {
         Task { @MainActor in
             do {
@@ -70,7 +67,6 @@ private extension GameDetailsPresenter {
 
 // MARK: - GameDetailsPresentation
 extension GameDetailsPresenter: GameDetailsPresentation {
-    
     func viewDidLoad() {
         state = .loading
         view?.setupUI(with: game)

@@ -8,7 +8,6 @@
 import Foundation
 
 final class MMOBombResponseParserImpl {
-    
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -25,7 +24,6 @@ final class MMOBombResponseParserImpl {
 
 // MARK: - MMOBombResponseParser
 extension MMOBombResponseParserImpl: MMOBombResponseParser {
-    
     func parseGetAllGamesResponse(data: Data) throws -> [Game] {
         let parsedResponse = try decoder.decode(GetAllGamesResponse.self, from: data)
         return parsedResponse.games.map(Game.init)

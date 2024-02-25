@@ -8,7 +8,6 @@
 import Foundation
 
 struct GetGameByIdResponse: Decodable {
-    
     let id: Int
     let title: String
     let thumbnail: URL
@@ -44,7 +43,6 @@ struct GetGameByIdResponse: Decodable {
     }
 
     init(from decoder: Decoder) throws {
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.title = try container.decode(String.self, forKey: .title)

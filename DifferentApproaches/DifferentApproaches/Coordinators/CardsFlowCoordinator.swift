@@ -8,7 +8,6 @@
 import UIKit
 
 class CardsFlowCoordinator: Coordinator {
-
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: CardsFlowCoordinatorDelegate?
@@ -20,12 +19,10 @@ class CardsFlowCoordinator: Coordinator {
 
 // MARK: - CardsFlowCoordinatorDelegate
 protocol CardsFlowCoordinatorDelegate: AnyObject {
-
 }
 
 // MARK: - Private Methods
 private extension CardsFlowCoordinator {
-
     func showCardsListScene() {
         let cardsListVC = CardsListAssembly.cardsList(delegate: self)
         navigationController.pushViewController(cardsListVC, animated: true)
@@ -39,7 +36,6 @@ private extension CardsFlowCoordinator {
 
 // MARK: - Coordinator
 extension CardsFlowCoordinator {
-
     func start() {
         showCardsListScene()
     }
@@ -47,7 +43,6 @@ extension CardsFlowCoordinator {
 
 // MARK: - CardsListSceneDelegate
 extension CardsFlowCoordinator: CardsListSceneDelegate {
-
     func didSelectCard(_ card: Card) {
         showCardDetailsScene(card: card)
     }
@@ -55,5 +50,4 @@ extension CardsFlowCoordinator: CardsListSceneDelegate {
 
 // MARK: - CardDetailsSceneDelegate
 extension CardsFlowCoordinator: CardDetailsSceneDelegate {
-
 }

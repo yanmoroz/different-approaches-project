@@ -8,7 +8,6 @@
 import UIKit
 
 final class GameDetailsViewController: UIViewController {
-    
     private lazy var customView = view as? GameDetailsView
     var presenter: GameDetailsPresentation?
     
@@ -24,7 +23,6 @@ final class GameDetailsViewController: UIViewController {
 
 // MARK: - GameDetailsViewInterface
 extension GameDetailsViewController: GameDetailsViewInterface {
-    
     func setupUI(with game: Game) {
         title = game.title
     }

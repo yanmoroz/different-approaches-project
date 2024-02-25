@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
     private lazy var coordinators: [Coordinator] = [
         self.gamesTabCoordinator(),
         self.cardsTabprepareGamesTab()
@@ -21,7 +20,6 @@ class MainViewController: UITabBarController {
 }
 
 private enum Tab {
-    
     case games
     case cards
     
@@ -59,7 +57,6 @@ private enum Tab {
 
 // MARK: - Private Methods
 private extension MainViewController {
-    
     func gamesTabCoordinator() -> GamesFlowCoordinator {
         let coordinator = GamesFlowCoordinator(navigationController: UINavigationController())
         let tabItem = Tab.games.tabBarItem

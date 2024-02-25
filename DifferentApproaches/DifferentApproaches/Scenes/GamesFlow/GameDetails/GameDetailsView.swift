@@ -8,7 +8,6 @@
 import UIKit
 
 final class GameDetailsView: UIView {
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24, weight: .bold)
@@ -35,7 +34,6 @@ extension GameDetailsView {
 
 // MARK: - Private Methods
 private extension GameDetailsView {
-    
     func setupUI() {
         backgroundColor = .systemBackground
         addSubview(titleLabel)

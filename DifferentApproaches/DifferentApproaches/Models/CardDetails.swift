@@ -8,7 +8,6 @@
 import Foundation
 
 struct CardDetails: Identifiable {
-    
     let id = UUID()
     let name: String
     let manaCost: String
@@ -16,7 +15,6 @@ struct CardDetails: Identifiable {
 
 // MARK: - Casting Inits
 extension CardDetails {
-    
     init(response: GetCardByIdResponse.Card) {
         name = response.name
         manaCost = response.manaCost

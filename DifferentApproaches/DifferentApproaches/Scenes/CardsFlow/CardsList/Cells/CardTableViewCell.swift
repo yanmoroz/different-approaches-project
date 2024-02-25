@@ -8,7 +8,6 @@
 import UIKit
 
 final class CardTableViewCell: UITableViewCell {
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .regular)
@@ -36,7 +35,6 @@ final class CardTableViewCell: UITableViewCell {
 
 // MARK: - Public Methods
 extension CardTableViewCell {
-    
     func setTitle(_ title: String, manaCost: String) {
         titleLabel.text = title
         manaCostLabel.text = manaCost
@@ -45,9 +43,7 @@ extension CardTableViewCell {
 
 // MARK: - Private Methods
 private extension CardTableViewCell {
-    
     func setupUI() {
-        
         selectionStyle = .none
         contentView.addSubview(titleLabel)
         contentView.addSubview(manaCostLabel)

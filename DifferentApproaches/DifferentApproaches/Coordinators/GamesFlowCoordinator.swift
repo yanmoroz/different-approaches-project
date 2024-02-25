@@ -8,7 +8,6 @@
 import UIKit
 
 class GamesFlowCoordinator: Coordinator {
-    
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: GamesFlowCoordinatorDelegate?
@@ -20,12 +19,10 @@ class GamesFlowCoordinator: Coordinator {
 
 // MARK: - GamesFlowCoordinatorDelegate
 protocol GamesFlowCoordinatorDelegate: AnyObject {
-    
 }
 
 // MARK: - Private Methods
 private extension GamesFlowCoordinator {
-    
     func showGamesListScene() {
         let gamesListVC = GamesListAssembly.gamesList(delegate: self)
         navigationController.pushViewController(gamesListVC, animated: true)
@@ -39,7 +36,6 @@ private extension GamesFlowCoordinator {
 
 // MARK: - Coordinator
 extension GamesFlowCoordinator {
-    
     func start() {
         showGamesListScene()
     }
@@ -47,7 +43,6 @@ extension GamesFlowCoordinator {
 
 // MARK: - GamesListSceneDelegate
 extension GamesFlowCoordinator: GamesListSceneDelegate {
-    
     func didSelectGame(_ game: Game) {
         showGameDetailsScene(game: game)
     }
@@ -55,5 +50,4 @@ extension GamesFlowCoordinator: GamesListSceneDelegate {
 
 // MARK: - GameDetailsSceneDelegate
 extension GamesFlowCoordinator: GameDetailsSceneDelegate {
-    
 }

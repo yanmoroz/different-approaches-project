@@ -14,7 +14,6 @@ private enum ViewState {
 }
 
 final class GamesListPresenter {
-    
     weak var delegate: GamesListSceneDelegate?
     private weak var view: GamesListViewInterface?
     private let apiService: MMOBombApiService
@@ -45,7 +44,6 @@ final class GamesListPresenter {
     
     init(view: GamesListViewInterface,
          apiService: MMOBombApiService) {
-        
         self.view = view
         self.apiService = apiService
     }
@@ -53,7 +51,6 @@ final class GamesListPresenter {
 
 // MARK: - Private Methods
 private extension GamesListPresenter {
-    
     func fetchAllGames() {
         Task { @MainActor in
             do {
@@ -96,7 +93,6 @@ private extension GamesListPresenter {
 
 // MARK: - GamesListTableViewProviderDelegate
 extension GamesListPresenter: GamesListTableViewProviderDelegate {
-    
     func didSelectGame(at index: Int) {
         let game = fetchedGames[index]
         delegate?.didSelectGame(game)
@@ -105,7 +101,6 @@ extension GamesListPresenter: GamesListTableViewProviderDelegate {
 
 // MARK: - GamesListPresentation
 extension GamesListPresenter: GamesListPresentation {
-    
     func searchQueryDidChange(_ query: String) {
         guard query.isEmpty else {
             displayedGames = fetchedGames

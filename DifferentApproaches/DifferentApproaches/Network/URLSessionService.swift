@@ -8,7 +8,6 @@
 import Foundation
 
 final class URLSessionService {
-    
     private let session: URLSession
     
     init(session: URLSession = URLSession(configuration: .default)) {
@@ -18,7 +17,6 @@ final class URLSessionService {
 
 // MARK: - HTTPService
 extension URLSessionService: HTTPService {
-    
     func performRequest(_ request: URLRequestable) async throws -> Data {
         try await Task.sleep(nanoseconds: 3_000_000_000) // TODO: REMOVE
         let (data, response) = try await session.data(for: request.asURLRequest())

@@ -8,7 +8,6 @@
 import UIKit
 
 final class GameTableViewCell: UITableViewCell {
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .regular)
@@ -36,7 +35,6 @@ final class GameTableViewCell: UITableViewCell {
 
 // MARK: - Public Methods
 extension GameTableViewCell {
-    
     func setTitle(_ title: String, genre: String) {
         titleLabel.text = title
         genreLabel.text = genre
@@ -45,9 +43,7 @@ extension GameTableViewCell {
 
 // MARK: - Private Methods
 private extension GameTableViewCell {
-    
     func setupUI() {
-        
         selectionStyle = .none
         contentView.addSubview(titleLabel)
         contentView.addSubview(genreLabel)

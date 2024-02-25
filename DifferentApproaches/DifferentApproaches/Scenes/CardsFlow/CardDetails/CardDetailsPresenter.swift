@@ -14,7 +14,6 @@ private enum ViewState {
 }
 
 final class CardDetailsPresenter {
-    
     weak var delegate: CardDetailsSceneDelegate?
     private weak var view: CardDetailsViewInterface?
     private let apiService: MTGApiService
@@ -35,7 +34,6 @@ final class CardDetailsPresenter {
     init(card: Card,
          view: CardDetailsViewInterface,
          apiService: MTGApiService) {
-        
         self.card = card
         self.view = view
         self.apiService = apiService
@@ -44,7 +42,6 @@ final class CardDetailsPresenter {
 
 // MARK: - Private Methods
 private extension CardDetailsPresenter {
-    
     func fetchCardById(_ id: String) {
         Task { @MainActor in
             do {
@@ -70,7 +67,6 @@ private extension CardDetailsPresenter {
 
 // MARK: - CardDetailsPresentation
 extension CardDetailsPresenter: CardDetailsPresentation {
-    
     func viewDidLoad() {
         state = .loading
         view?.setupUI(with: card)

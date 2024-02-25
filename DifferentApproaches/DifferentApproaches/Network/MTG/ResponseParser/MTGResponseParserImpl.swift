@@ -8,7 +8,6 @@
 import Foundation
 
 final class MTGResponseParserImpl {
-    
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = {
@@ -24,7 +23,6 @@ final class MTGResponseParserImpl {
 
 // MARK: - MTGResponseParser
 extension MTGResponseParserImpl: MTGResponseParser {
-    
     func parseGetAllCardsResponse(data: Data) throws -> [Card] {
         let parsedResponse = try decoder.decode(GetAllCardsResponse.self, from: data)
         return parsedResponse.cards.compactMap { try? Card(response: $0) }

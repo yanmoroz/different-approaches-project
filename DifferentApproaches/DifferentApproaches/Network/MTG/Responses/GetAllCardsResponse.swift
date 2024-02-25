@@ -8,7 +8,6 @@
 import Foundation
 
 struct GetAllCardsResponse: Decodable {
-    
     let cards: [Card]
     
     struct Card: Decodable {

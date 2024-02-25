@@ -8,7 +8,6 @@
 import UIKit
 
 final class CardsListViewController: UIViewController {
-    
     var presenter: CardsListPresentation?
     private lazy var customView = view as? CardsListView
     
@@ -28,7 +27,6 @@ final class CardsListViewController: UIViewController {
 
 // MARK: - Private Methods
 private extension CardsListViewController {
-    
     func setupUI() {
         view = CardsListView()
         title = Locals.title
@@ -37,7 +35,6 @@ private extension CardsListViewController {
 
 // MARK: - CardsListViewInterface
 extension CardsListViewController: CardsListViewInterface {
- 
     func reloadData() {
         customView?.reloadTableView()
     }

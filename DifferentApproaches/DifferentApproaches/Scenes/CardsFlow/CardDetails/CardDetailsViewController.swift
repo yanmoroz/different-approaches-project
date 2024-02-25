@@ -8,7 +8,6 @@
 import UIKit
 
 final class CardDetailsViewController: UIViewController {
-    
     private lazy var customView = view as? CardDetailsView
     var presenter: CardDetailsPresentation?
     
@@ -24,7 +23,6 @@ final class CardDetailsViewController: UIViewController {
 
 // MARK: - CardDetailsViewInterface
 extension CardDetailsViewController: CardDetailsViewInterface {
-    
     func setupUI(with card: Card) {
         title = card.name
     }

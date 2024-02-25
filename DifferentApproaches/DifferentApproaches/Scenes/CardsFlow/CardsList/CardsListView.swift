@@ -8,7 +8,6 @@
 import UIKit
 
 final class CardsListView: UIView {
-    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,6 @@ final class CardsListView: UIView {
 
 // MARK: - Public Methods
 extension CardsListView {
-    
     func reloadTableView() {
         tableView.reloadData()
     }
@@ -42,7 +40,6 @@ extension CardsListView {
 
 // MARK: - Private Methods
 private extension CardsListView {
-    
     func setupUI() {
         backgroundColor = .systemBackground
         addSubview(tableView)

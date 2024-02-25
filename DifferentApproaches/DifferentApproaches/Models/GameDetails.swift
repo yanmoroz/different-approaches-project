@@ -8,7 +8,6 @@
 import Foundation
 
 struct GameDetails: Identifiable {
-    
     let id: Int
     let title: String
     let thumbnail: URL
@@ -26,7 +25,6 @@ struct GameDetails: Identifiable {
     let screenshots: [Screenshot]
     
     struct MinimumSystemRequirements {
-        
         let os: String
         let processor: String
         let memory: String
@@ -35,7 +33,6 @@ struct GameDetails: Identifiable {
     }
     
     struct Screenshot {
-        
         let id: Int
         let image: URL
     }
@@ -43,7 +40,6 @@ struct GameDetails: Identifiable {
 
 // MARK: - Casting Inits
 extension GameDetails {
-    
     init(response: GetGameByIdResponse) {
         id = response.id
         title = response.title
@@ -72,7 +68,6 @@ extension GameDetails {
 
 // MARK: - Casting Inits
 extension GameDetails.MinimumSystemRequirements {
-    
     init(minimumSystemRequirements: GetGameByIdResponse.MinimumSystemRequirements) {
         os = minimumSystemRequirements.os
         processor = minimumSystemRequirements.processor
@@ -84,7 +79,6 @@ extension GameDetails.MinimumSystemRequirements {
 
 // MARK: - Casting Inits
 extension GameDetails.Screenshot {
-    
     init(screenshot: GetGameByIdResponse.Screenshot) {
         id = screenshot.id
         image = screenshot.image

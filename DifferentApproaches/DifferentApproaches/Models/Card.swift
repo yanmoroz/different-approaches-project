@@ -8,7 +8,6 @@
 import Foundation
 
 struct Card: Identifiable {
-
     let id: String
     let name: String
     let manaCost: String
@@ -16,7 +15,6 @@ struct Card: Identifiable {
 
 // MARK: - Casting Inits
 extension Card {
-    
     init(response: GetAllCardsResponse.Card) throws {
         guard let multiverseId = response.multiverseid else {
             throw CastError.missingId

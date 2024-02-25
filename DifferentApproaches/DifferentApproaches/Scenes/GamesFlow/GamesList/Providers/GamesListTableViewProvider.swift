@@ -8,7 +8,6 @@
 import UIKit
 
 final class GamesListTableViewProvider: NSObject {
-    
     var games: [Game] = []
     weak var delegate: GamesListTableViewProviderDelegate?
 }
@@ -20,7 +19,6 @@ protocol GamesListTableViewProviderDelegate: AnyObject {
 
 // MARK: - UITableViewDataSource
 extension GamesListTableViewProvider: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count
     }
@@ -38,7 +36,6 @@ extension GamesListTableViewProvider: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension GamesListTableViewProvider: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelectGame(at: indexPath.row)
     }

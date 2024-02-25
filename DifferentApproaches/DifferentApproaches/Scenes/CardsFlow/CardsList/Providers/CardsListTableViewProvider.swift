@@ -8,7 +8,6 @@
 import UIKit
 
 final class CardsListTableViewProvider: NSObject {
-    
     var cards: [Card] = []
     weak var delegate: CardsListTableViewProviderDelegate?
 }
@@ -20,7 +19,6 @@ protocol CardsListTableViewProviderDelegate: AnyObject {
 
 // MARK: - UITableViewDataSource
 extension CardsListTableViewProvider: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cards.count
     }
@@ -38,7 +36,6 @@ extension CardsListTableViewProvider: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension CardsListTableViewProvider: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelectCard(at: indexPath.row)
     }

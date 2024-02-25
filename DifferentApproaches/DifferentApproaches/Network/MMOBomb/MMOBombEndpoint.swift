@@ -14,7 +14,6 @@ enum MMOBombEndpoint {
 
 // MARK: - URLRequestable
 extension MMOBombEndpoint: URLRequestable {
-    
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try URLRequest(url: getUrl())
         urlRequest.httpMethod = getMethod().rawValue
@@ -25,7 +24,6 @@ extension MMOBombEndpoint: URLRequestable {
 
 // MARK: - Private Methods
 private extension MMOBombEndpoint {
-    
     func getHttpBody() -> Data? {
         let parameters: [String: Any]?
         

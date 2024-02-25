@@ -8,7 +8,6 @@
 import Foundation
 
 enum GameDetailsAssembly {
-
     static func gameDetails(game: Game, delegate: GameDetailsSceneDelegate? = nil) -> GameDetailsViewController {
         let view = GameDetailsViewController()
         let apiService = MMOBombApiServiceImpl(

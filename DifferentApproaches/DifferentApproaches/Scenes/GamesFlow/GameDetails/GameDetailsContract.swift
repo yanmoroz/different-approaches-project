@@ -17,5 +17,4 @@ protocol GameDetailsPresentation {
 }
 
 protocol GameDetailsSceneDelegate: AnyObject {
-    
 }

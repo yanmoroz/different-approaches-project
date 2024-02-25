@@ -8,7 +8,6 @@
 import Foundation
 
 enum CardsListAssembly {
-    
     static func cardsList(delegate: CardsListSceneDelegate? = nil) -> CardsListViewController {
         let view = CardsListViewController()
         let apiService = MTGApiServiceImpl(

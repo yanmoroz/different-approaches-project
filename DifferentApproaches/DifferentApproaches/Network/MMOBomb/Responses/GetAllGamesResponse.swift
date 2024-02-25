@@ -8,11 +8,9 @@
 import Foundation
 
 struct GetAllGamesResponse: Decodable {
-    
     let games: [Game]
     
     init(from decoder: Decoder) throws {
-        
         var container = try decoder.unkeyedContainer()
         var games: [Game] = []
 
@@ -25,7 +23,6 @@ struct GetAllGamesResponse: Decodable {
     }
     
     struct Game: Decodable {
-        
         let id: Int
         let title: String
         let thumbnail: URL

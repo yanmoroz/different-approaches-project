@@ -17,5 +17,4 @@ protocol CardDetailsPresentation {
 }
 
 protocol CardDetailsSceneDelegate: AnyObject {
-    
 }
