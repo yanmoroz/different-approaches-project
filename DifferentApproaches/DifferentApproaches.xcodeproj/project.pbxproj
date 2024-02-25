@@ -452,6 +452,7 @@
 				A32EAAA52B8507A0003ED411 /* Sources */,
 				A32EAAA62B8507A0003ED411 /* Frameworks */,
 				A32EAAA72B8507A0003ED411 /* Resources */,
+				A37B7F9B2B8AB545009FBA17 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -506,6 +507,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A37B7F9B2B8AB545009FBA17 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A32EAAA52B8507A0003ED411 /* Sources */ = {
@@ -713,6 +735,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF5X2BH93G;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DifferentApproaches/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Different Approaches";
@@ -742,6 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF5X2BH93G;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DifferentApproaches/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
