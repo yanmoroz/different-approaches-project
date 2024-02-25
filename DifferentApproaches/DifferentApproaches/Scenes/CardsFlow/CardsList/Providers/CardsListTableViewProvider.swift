@@ -9,7 +9,7 @@ import UIKit
 
 final class CardsListTableViewProvider: NSObject {
     
-    var cards = [Card]()
+    var cards: [Card] = []
     weak var delegate: CardsListTableViewProviderDelegate?
 }
 

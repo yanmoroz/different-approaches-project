@@ -25,31 +25,6 @@ struct GetGameByIdResponse: Decodable {
     let minimumSystemRequirements: MinimumSystemRequirements?
     let screenshots: [Screenshot]
     
-    init(from decoder: Decoder) throws {
-        
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.title = try container.decode(String.self, forKey: .title)
-        self.thumbnail = try container.decode(URL.self, forKey: .thumbnail)
-        self.status = try container.decode(String.self, forKey: .status)
-        self.description = try container.decode(String.self, forKey: .description)
-        self.genre = try container.decode(String.self, forKey: .genre)
-        self.platform = try container.decode(String.self, forKey: .platform)
-        self.publisher = try container.decode(String.self, forKey: .publisher)
-        self.developer = try container.decode(String.self, forKey: .developer)
-        self.screenshots = try container.decode([Screenshot].self, forKey: .screenshots)
-        self.shortDescription = try container.decode(String.self, forKey: .shortDescription)
-        self.gameUrl = try container.decode(URL.self, forKey: .gameUrl)
-        self.profileUrl = try container.decode(URL.self, forKey: .profileUrl)
-        self.minimumSystemRequirements = try container.decodeIfPresent(MinimumSystemRequirements.self, forKey: .minimumSystemRequirements)
-        
-        if let releaseDate = try? container.decodeIfPresent(Date.self, forKey: .releaseDate) {
-            self.releaseDate = releaseDate
-        } else {
-            self.releaseDate = nil
-        }
-    }
-    
     enum CodingKeys: CodingKey {
         case id
         case title
@@ -66,6 +41,32 @@ struct GetGameByIdResponse: Decodable {
         case releaseDate
         case profileUrl
         case minimumSystemRequirements
+    }
+
+    init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.title = try container.decode(String.self, forKey: .title)
+        self.thumbnail = try container.decode(URL.self, forKey: .thumbnail)
+        self.status = try container.decode(String.self, forKey: .status)
+        self.description = try container.decode(String.self, forKey: .description)
+        self.genre = try container.decode(String.self, forKey: .genre)
+        self.platform = try container.decode(String.self, forKey: .platform)
+        self.publisher = try container.decode(String.self, forKey: .publisher)
+        self.developer = try container.decode(String.self, forKey: .developer)
+        self.screenshots = try container.decode([Screenshot].self, forKey: .screenshots)
+        self.shortDescription = try container.decode(String.self, forKey: .shortDescription)
+        self.gameUrl = try container.decode(URL.self, forKey: .gameUrl)
+        self.profileUrl = try container.decode(URL.self, forKey: .profileUrl)
+        self.minimumSystemRequirements = try container.decodeIfPresent(MinimumSystemRequirements.self,
+                                                                       forKey: .minimumSystemRequirements)
+
+        if let releaseDate = try? container.decodeIfPresent(Date.self, forKey: .releaseDate) {
+            self.releaseDate = releaseDate
+        } else {
+            self.releaseDate = nil
+        }
     }
     
     struct MinimumSystemRequirements: Decodable {

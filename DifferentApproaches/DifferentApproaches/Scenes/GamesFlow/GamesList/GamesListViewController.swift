@@ -29,7 +29,7 @@ final class GamesListViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    private struct Locals {
+    private enum Locals {
         static let title = "Games"
         static let searchBarPlaceholder = "Find a game..."
     }

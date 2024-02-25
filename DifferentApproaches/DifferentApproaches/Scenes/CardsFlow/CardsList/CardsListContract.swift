@@ -19,4 +19,3 @@ protocol CardsListPresentation {
 protocol CardsListSceneDelegate: AnyObject {
     func didSelectCard(_ card: Card)
 }
-

@@ -21,7 +21,7 @@ final class CardsListViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    private struct Locals {
+    private enum Locals {
         static let title = "Cards"
     }
 }

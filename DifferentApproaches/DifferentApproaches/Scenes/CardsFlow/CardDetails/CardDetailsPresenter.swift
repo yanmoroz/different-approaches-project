@@ -7,6 +7,12 @@
 
 import Foundation
 
+private enum ViewState {
+    case loading
+    case loadSucceed(CardDetails)
+    case loadFailed(Error)
+}
+
 final class CardDetailsPresenter {
     
     weak var delegate: CardDetailsSceneDelegate?
@@ -33,12 +39,6 @@ final class CardDetailsPresenter {
         self.card = card
         self.view = view
         self.apiService = apiService
-    }
-    
-    fileprivate enum ViewState {
-        case loading
-        case loadSucceed(CardDetails)
-        case loadFailed(Error)
     }
 }
 

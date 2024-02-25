@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CardDetailsAssembly {
+enum CardDetailsAssembly {
     
     static func cardDetails(card: Card, delegate: CardDetailsSceneDelegate? = nil) -> CardDetailsViewController {
         let view = CardDetailsViewController()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GamesListAssembly {
+enum GamesListAssembly {
     
     static func gamesList(delegate: GamesListSceneDelegate? = nil) -> GamesListViewController {
         let view = GamesListViewController()

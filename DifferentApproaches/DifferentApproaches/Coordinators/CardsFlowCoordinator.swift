@@ -8,11 +8,11 @@
 import UIKit
 
 class CardsFlowCoordinator: Coordinator {
-    
-    var childCoordinators = [Coordinator]()
+
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: CardsFlowCoordinatorDelegate?
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -20,24 +20,26 @@ class CardsFlowCoordinator: Coordinator {
 
 // MARK: - CardsFlowCoordinatorDelegate
 protocol CardsFlowCoordinatorDelegate: AnyObject {
-    
+
 }
 
 // MARK: - Private Methods
 private extension CardsFlowCoordinator {
-    
+
     func showCardsListScene() {
-        navigationController.pushViewController(CardsListAssembly.cardsList(delegate: self), animated: true)
+        let cardsListVC = CardsListAssembly.cardsList(delegate: self)
+        navigationController.pushViewController(cardsListVC, animated: true)
     }
-    
+
     func showCardDetailsScene(card: Card) {
-        navigationController.pushViewController(CardDetailsAssembly.cardDetails(card: card, delegate: self), animated: true)
+        let cardDetailsVC = CardDetailsAssembly.cardDetails(card: card, delegate: self)
+        navigationController.pushViewController(cardDetailsVC, animated: true)
     }
 }
 
 // MARK: - Coordinator
 extension CardsFlowCoordinator {
-    
+
     func start() {
         showCardsListScene()
     }
@@ -45,7 +47,7 @@ extension CardsFlowCoordinator {
 
 // MARK: - CardsListSceneDelegate
 extension CardsFlowCoordinator: CardsListSceneDelegate {
-    
+
     func didSelectCard(_ card: Card) {
         showCardDetailsScene(card: card)
     }
@@ -53,5 +55,5 @@ extension CardsFlowCoordinator: CardsListSceneDelegate {
 
 // MARK: - CardDetailsSceneDelegate
 extension CardsFlowCoordinator: CardDetailsSceneDelegate {
-    
+
 }

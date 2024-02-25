@@ -7,6 +7,12 @@
 
 import Foundation
 
+private enum ViewState {
+    case initialLoading
+    case loadSucceed([Game])
+    case loadFailed(Error)
+}
+
 final class GamesListPresenter {
     
     weak var delegate: GamesListSceneDelegate?
@@ -25,13 +31,13 @@ final class GamesListPresenter {
         }
     }
     
-    private var fetchedGames = [Game]() {
+    private var fetchedGames: [Game] = [] {
         willSet {
             displayedGames = newValue
         }
     }
     
-    private var displayedGames = [Game]() {
+    private var displayedGames: [Game] = [] {
         willSet {
             setGamesListTableView(games: newValue)
         }
@@ -42,12 +48,6 @@ final class GamesListPresenter {
         
         self.view = view
         self.apiService = apiService
-    }
-    
-    fileprivate enum ViewState {
-        case initialLoading
-        case loadSucceed([Game])
-        case loadFailed(Error)
     }
 }
 
@@ -112,7 +112,7 @@ extension GamesListPresenter: GamesListPresentation {
             return
         }
         
-        displayedGames = fetchedGames.filter({ $0.title.contains(query)})
+        displayedGames = fetchedGames.filter { $0.title.contains(query) }
     }
     
     func viewDidLoad() {

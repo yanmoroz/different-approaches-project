@@ -9,7 +9,7 @@ import Foundation
 
 struct CardDetails: Identifiable {
     
-    let id: UUID = UUID()
+    let id = UUID()
     let name: String
     let manaCost: String
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class GamesFlowCoordinator: Coordinator {
     
-    var childCoordinators = [Coordinator]()
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: GamesFlowCoordinatorDelegate?
     
@@ -27,11 +27,13 @@ protocol GamesFlowCoordinatorDelegate: AnyObject {
 private extension GamesFlowCoordinator {
     
     func showGamesListScene() {
-        navigationController.pushViewController(GamesListAssembly.gamesList(delegate: self), animated: true)
+        let gamesListVC = GamesListAssembly.gamesList(delegate: self)
+        navigationController.pushViewController(gamesListVC, animated: true)
     }
     
     func showGameDetailsScene(game: Game) {
-        navigationController.pushViewController(GameDetailsAssembly.gameDetails(game: game, delegate: self), animated: true)
+        let gameDetailsVC = GameDetailsAssembly.gameDetails(game: game, delegate: self)
+        navigationController.pushViewController(gameDetailsVC, animated: true)
     }
 }
 

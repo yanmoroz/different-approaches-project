@@ -9,7 +9,7 @@ import UIKit
 
 final class GamesListTableViewProvider: NSObject {
     
-    var games = [Game]()
+    var games: [Game] = []
     weak var delegate: GamesListTableViewProviderDelegate?
 }
 

@@ -7,6 +7,12 @@
 
 import Foundation
 
+private enum ViewState {
+    case loading
+    case loadSucceed([Card])
+    case loadFailed(Error)
+}
+
 final class CardsListPresenter {
     
     weak var delegate: CardsListSceneDelegate?
@@ -25,19 +31,13 @@ final class CardsListPresenter {
         }
     }
     
-    private var fetchedCards = [Card]()
-    
+    private var fetchedCards: [Card] = []
+
     init(view: CardsListViewInterface,
          apiService: MTGApiService) {
         
         self.view = view
         self.apiService = apiService
-    }
-    
-    fileprivate enum ViewState {
-        case loading
-        case loadSucceed([Card])
-        case loadFailed(Error)
     }
 }
 

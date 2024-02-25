@@ -14,8 +14,8 @@ struct GetAllGamesResponse: Decodable {
     init(from decoder: Decoder) throws {
         
         var container = try decoder.unkeyedContainer()
-        var games = [Game]()
-        
+        var games: [Game] = []
+
         while !container.isAtEnd {
             let game = try container.decode(Game.self)
             games.append(game)
@@ -65,7 +65,8 @@ struct GetAllGamesResponse: Decodable {
             self.gameUrl = try container.decode(URL.self, forKey: .gameUrl)
             self.profileUrl = try container.decode(URL.self, forKey: .profileUrl)
             
-            if let releaseDate = try? container.decodeIfPresent(Date.self, forKey: GetAllGamesResponse.Game.CodingKeys.releaseDate) {
+            let releaseDate = try? container.decodeIfPresent(Date.self, forKey: .releaseDate)
+            if let releaseDate {
                 self.releaseDate = releaseDate
             } else {
                 self.releaseDate = nil

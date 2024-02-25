@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class MainViewController: UITabBarController {
-    
+class MainViewController: UITabBarController {
+
     private lazy var coordinators: [Coordinator] = [
         self.gamesTabCoordinator(),
         self.cardsTabprepareGamesTab()
@@ -16,7 +16,7 @@ final class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = coordinators.map({ $0.navigationController })
+        viewControllers = coordinators.map { $0.navigationController }
     }
 }
 
