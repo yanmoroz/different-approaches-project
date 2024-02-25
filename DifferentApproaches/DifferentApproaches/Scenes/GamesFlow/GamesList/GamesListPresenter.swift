@@ -107,7 +107,7 @@ extension GamesListPresenter: GamesListTableViewProviderDelegate {
 extension GamesListPresenter: GamesListPresentation {
     
     func searchQueryDidChange(_ query: String) {
-        guard query.count > 0 else {
+        guard query.isEmpty else {
             displayedGames = fetchedGames
             return
         }

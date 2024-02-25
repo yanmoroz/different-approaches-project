@@ -39,6 +39,8 @@
 		A37B7F902B89750C009FBA17 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */; };
 		A37B7F942B8975CA009FBA17 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F932B8975CA009FBA17 /* CardDetails.swift */; };
 		A37B7F992B897C35009FBA17 /* CastError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F982B897C35009FBA17 /* CastError.swift */; };
+		A37CDE552B8BE432009323EC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A37CDE542B8BE432009323EC /* .swiftlint.yml */; };
+		A37CDE572B8BE439009323EC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A37CDE562B8BE439009323EC /* README.md */; };
 		A3BB8B9F2B86BFBB00057712 /* MTGResponseParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */; };
 		A3BB8BA12B86BFEB00057712 /* MTGApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */; };
 		A3BB8BA42B86C36F00057712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BB8BA32B86C36F00057712 /* Card.swift */; };
@@ -103,6 +105,8 @@
 		A37B7F8F2B89750C009FBA17 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 		A37B7F932B8975CA009FBA17 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		A37B7F982B897C35009FBA17 /* CastError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastError.swift; sourceTree = "<group>"; };
+		A37CDE542B8BE432009323EC /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A37CDE562B8BE439009323EC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A3BB8B9E2B86BFBB00057712 /* MTGResponseParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParserImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA02B86BFEB00057712 /* MTGApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGApiServiceImpl.swift; sourceTree = "<group>"; };
 		A3BB8BA32B86C36F00057712 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		A32EAAA02B8507A0003ED411 = {
 			isa = PBXGroup;
 			children = (
+				A37CDE562B8BE439009323EC /* README.md */,
+				A37CDE542B8BE432009323EC /* .swiftlint.yml */,
 				A32EAAAB2B8507A0003ED411 /* DifferentApproaches */,
 				A32EAAAA2B8507A0003ED411 /* Products */,
 			);
@@ -501,7 +507,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37CDE552B8BE432009323EC /* .swiftlint.yml in Resources */,
 				A32EAAB92B8507A1003ED411 /* LaunchScreen.storyboard in Resources */,
+				A37CDE572B8BE439009323EC /* README.md in Resources */,
 				A32EAAB62B8507A1003ED411 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
