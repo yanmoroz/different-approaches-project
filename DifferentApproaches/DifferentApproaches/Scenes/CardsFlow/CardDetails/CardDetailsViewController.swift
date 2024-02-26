@@ -27,7 +27,7 @@ extension CardDetailsViewController: CardDetailsViewInterface {
         title = card.name
     }
     
-    func updateUI(with card: CardDetails?) {
+    func updateUI(with card: CardDetails) {
         customView?.update(with: card)
     }
 }

@@ -26,8 +26,9 @@ final class CardDetailsPresenter {
     }
     
     private var fetchedCard: CardDetails? {
-        didSet {
-            view?.updateUI(with: fetchedCard)
+        willSet {
+            guard let newValue else { return }
+            view?.updateUI(with: newValue)
         }
     }
     

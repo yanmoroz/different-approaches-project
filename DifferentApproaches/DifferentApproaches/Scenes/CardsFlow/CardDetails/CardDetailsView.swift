@@ -15,6 +15,14 @@ final class CardDetailsView: UIView {
         return label
     }()
     
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .secondarySystemBackground
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -27,8 +35,12 @@ final class CardDetailsView: UIView {
 
 // MARK: - Public Methods
 extension CardDetailsView {
-    func update(with model: CardDetails?) {
-        titleLabel.text = model?.name
+    func update(with model: CardDetails) {
+        titleLabel.text = model.name
+        
+        Task { @MainActor in
+            imageView.image = try await ImageDownloader.shared.downloadImage(for: model.thumbnail)
+        }
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 
 protocol CardDetailsViewInterface: ViewInterface {
     func setupUI(with card: Card)
-    func updateUI(with card: CardDetails?)
+    func updateUI(with card: CardDetails)
 }
 
 protocol CardDetailsPresentation {
