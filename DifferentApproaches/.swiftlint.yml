@@ -105,4 +105,4 @@ trailing_whitespace:
   ignores_comments: true
 
 vertical_whitespace:
-  max_empty_lines: 2
+  max_empty_lines: 1

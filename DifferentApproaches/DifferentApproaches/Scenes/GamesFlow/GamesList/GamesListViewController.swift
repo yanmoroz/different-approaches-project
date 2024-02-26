@@ -10,13 +10,10 @@ import UIKit
 final class GamesListViewController: UIViewController {
     var presenter: GamesListPresentation?
 
-    var foo = 5
-
     private lazy var customView = view as? GamesListView
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = Locals.searchBarPlaceholder
-        searchController.searchBar.isHidden = false
         searchController.searchResultsUpdater = self
         return searchController
     }()
@@ -41,7 +38,6 @@ private extension GamesListViewController {
     func setupUI() {
         view = GamesListView()
         title = Locals.title
-        navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
 }
@@ -49,7 +45,7 @@ private extension GamesListViewController {
 // MARK: - UISearchResultsUpdating
 extension GamesListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
+        guard let text = searchController.searchBar.text, !text.isEmpty else { return }
         presenter?.searchQueryDidChange(text)
     }
 }
