@@ -23,6 +23,7 @@
 		A34059632B8C17BD00B5A08A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34059622B8C17BD00B5A08A /* ImageDownloader.swift */; };
 		A34059652B8C199400B5A08A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34059642B8C199400B5A08A /* ImageCache.swift */; };
 		A34059672B8C1CF600B5A08A /* ImageDownloaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34059662B8C1CF600B5A08A /* ImageDownloaderError.swift */; };
+		A34059692B8C239500B5A08A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34059682B8C239500B5A08A /* UIImage+Extension.swift */; };
 		A37B7F672B896396009FBA17 /* MMOBombResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F662B896396009FBA17 /* MMOBombResponseParser.swift */; };
 		A37B7F6A2B89641E009FBA17 /* MMOBombApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */; };
 		A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */; };
@@ -92,6 +93,7 @@
 		A34059622B8C17BD00B5A08A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A34059642B8C199400B5A08A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		A34059662B8C1CF600B5A08A /* ImageDownloaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderError.swift; sourceTree = "<group>"; };
+		A34059682B8C239500B5A08A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A37B7F662B896396009FBA17 /* MMOBombResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombResponseParser.swift; sourceTree = "<group>"; };
 		A37B7F692B89641E009FBA17 /* MMOBombApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOBombApiService.swift; sourceTree = "<group>"; };
 		A37B7F6D2B8964C4009FBA17 /* MTGResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGResponseParser.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BB8BB62B86D37500057712 /* Error+Extension.swift */,
+				A34059682B8C239500B5A08A /* UIImage+Extension.swift */,
 				A3CF2AE52B8800CB005E4F7C /* UITableView+Extension.swift */,
 				A3CF2ADD2B87E415005E4F7C /* UITableViewCell+Extension.swift */,
 			);
@@ -575,6 +578,7 @@
 				A3CF2AE22B87E52B005E4F7C /* GamesListTableViewProvider.swift in Sources */,
 				A3CF2AE42B87E6A2005E4F7C /* GameTableViewCell.swift in Sources */,
 				A3BB8BAB2B86C67F00057712 /* MTGEndpoint.swift in Sources */,
+				A34059692B8C239500B5A08A /* UIImage+Extension.swift in Sources */,
 				A37B7F942B8975CA009FBA17 /* CardDetails.swift in Sources */,
 				A37B7F6E2B8964C4009FBA17 /* MTGResponseParser.swift in Sources */,
 				A3E469C12B86D8E700421B78 /* MainViewController.swift in Sources */,

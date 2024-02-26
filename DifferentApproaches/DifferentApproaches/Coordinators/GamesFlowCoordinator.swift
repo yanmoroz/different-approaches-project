@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GamesFlowCoordinator: Coordinator {
+final class GamesFlowCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: GamesFlowCoordinatorDelegate?

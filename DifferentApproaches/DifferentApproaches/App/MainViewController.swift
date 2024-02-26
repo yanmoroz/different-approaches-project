@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UITabBarController {
+final class MainViewController: UITabBarController {
     private lazy var coordinators: [Coordinator] = [
         self.gamesTabCoordinator(),
         self.cardsTabprepareGamesTab()

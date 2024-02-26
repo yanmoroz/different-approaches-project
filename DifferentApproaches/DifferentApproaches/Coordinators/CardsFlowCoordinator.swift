@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardsFlowCoordinator: Coordinator {
+final class CardsFlowCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     weak var delegate: CardsFlowCoordinatorDelegate?

@@ -13,6 +13,8 @@ disabled_rules:
   - multiline_parameters_brackets
   - indentation_width
   - nesting
+  - multiline_arguments
+  - trailing_whitespace
 
 analyzer_rules:
   - unused_import
@@ -37,7 +39,6 @@ opt_in_rules:
   - last_where
   - legacy_random
   - literal_expression_end_indentation
-  - multiline_arguments
   - multiline_function_chains
   - multiline_literal_brackets
   - multiline_parameters
@@ -52,7 +53,6 @@ opt_in_rules:
   - trailing_closure
   - unneeded_parentheses_in_closure_argument
   - yoda_condition
-  - trailing_whitespace
   - vertical_whitespace_opening_braces
 
 
@@ -93,16 +93,16 @@ line_length:
   ignores_function_declarations: true
   ignores_comments: true
 
-multiline_arguments:
-  first_argument_location: any_line
-  only_enforce_after_first_closure_on_first_line: true
-
 private_over_fileprivate:
   validate_extensions: true
 
-trailing_whitespace:
-  ignores_empty_lines: true
-  ignores_comments: true
-
 vertical_whitespace:
   max_empty_lines: 1
+
+#multiline_arguments:
+#  first_argument_location: any_line
+#  only_enforce_after_first_closure_on_first_line: true
+
+#trailing_whitespace:
+#  ignores_empty_lines: true
+#  ignores_comments: true

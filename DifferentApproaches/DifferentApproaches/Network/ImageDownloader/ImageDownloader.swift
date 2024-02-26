@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ImageDownloader {
+final class ImageDownloader {
     static let shared = ImageDownloader()
-    private let imageCache = ImageCache()
+    private let imageCache: ImageCache = ImageCacheImpl()
     
     private init() { }
 }
@@ -26,7 +26,7 @@ extension ImageDownloader {
             throw ImageDownloaderError.invalidImageData
         }
         
-        imageCache.cacheImage(image, for: url)
+        imageCache.insertImage(image, for: url)
         return image
     }
 }
