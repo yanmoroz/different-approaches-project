@@ -25,11 +25,11 @@ struct GameDetails: Identifiable {
     let screenshots: [Screenshot]
     
     struct MinimumSystemRequirements {
-        let os: String
-        let processor: String
-        let memory: String
-        let graphics: String
-        let storage: String
+        let os: String?
+        let processor: String?
+        let memory: String?
+        let graphics: String?
+        let storage: String?
     }
     
     struct Screenshot {

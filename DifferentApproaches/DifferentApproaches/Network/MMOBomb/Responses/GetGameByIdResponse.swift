@@ -68,11 +68,11 @@ struct GetGameByIdResponse: Decodable {
     }
     
     struct MinimumSystemRequirements: Decodable {
-        let os: String
-        let processor: String
-        let memory: String
-        let graphics: String
-        let storage: String
+        let os: String?
+        let processor: String?
+        let memory: String?
+        let graphics: String?
+        let storage: String?
     }
     
     struct Screenshot: Decodable {

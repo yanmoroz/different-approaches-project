@@ -34,13 +34,10 @@ final class GameDetailsView: UIView {
 // MARK: - Public Methods
 extension GameDetailsView {
     func update(with model: GameDetails) {
-//        guard let model else { return }
-
         titleLabel.text = model.title
 
         Task { @MainActor in
-            let data = try! await ImageDownloader.downloadImageData(from: model.thumbnail)
-            imageView.image = UIImage(data: data)
+            imageView.image = try await ImageDownloader.shared.downloadImage(for: model.thumbnail)
         }
     }
 }
