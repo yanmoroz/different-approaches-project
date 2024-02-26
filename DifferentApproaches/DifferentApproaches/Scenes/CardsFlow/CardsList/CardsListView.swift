@@ -16,6 +16,13 @@ final class CardsListView: UIView {
         return tableView
     }()
     
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.color = .accent
+        return indicator
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -36,6 +43,14 @@ extension CardsListView {
         tableView.delegate = provider
         tableView.dataSource = provider
     }
+
+    func toggleLoadingIndicator(visible: Bool) {
+        if visible {
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: - Private Methods
@@ -43,6 +58,7 @@ private extension CardsListView {
     func setupUI() {
         backgroundColor = .systemBackground
         addSubview(tableView)
+        addSubview(loadingIndicator)
         setupConstraints()
     }
     
@@ -51,5 +67,8 @@ private extension CardsListView {
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }

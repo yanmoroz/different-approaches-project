@@ -10,10 +10,12 @@ import UIKit
 protocol CardsListViewInterface: ViewInterface {
     func reloadData()
     func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate)
+    func toggleLoadingIndicator(visible: Bool)
 }
 
 protocol CardsListPresentation {
     func viewDidLoad()
+    func searchQueryDidChange(_ query: String)
 }
 
 protocol CardsListSceneDelegate: AnyObject {

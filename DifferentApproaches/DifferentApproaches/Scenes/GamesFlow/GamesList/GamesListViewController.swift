@@ -9,8 +9,8 @@ import UIKit
 
 final class GamesListViewController: UIViewController {
     var presenter: GamesListPresentation?
-
     private lazy var customView = view as? GamesListView
+
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = Locals.searchBarPlaceholder
@@ -45,7 +45,7 @@ private extension GamesListViewController {
 // MARK: - UISearchResultsUpdating
 extension GamesListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text, !text.isEmpty else { return }
+        guard let text = searchController.searchBar.text else { return }
         presenter?.searchQueryDidChange(text)
     }
 }

@@ -81,12 +81,8 @@ private extension GamesListPresenter {
     }
     
     func setGamesListTableView(games: [Game]) {
-        view?.setTableViewProvider(gamesListTableViewProvider)
-        updateGamesInView(games: games)
-    }
-    
-    func updateGamesInView(games: [Game]) {
         gamesListTableViewProvider.games = games
+        view?.setTableViewProvider(gamesListTableViewProvider)
         view?.reloadData()
     }
 }
@@ -101,16 +97,16 @@ extension GamesListPresenter: GamesListTableViewProviderDelegate {
 
 // MARK: - GamesListPresentation
 extension GamesListPresenter: GamesListPresentation {
+    func viewDidLoad() {
+        state = .initialLoading
+    }
+
     func searchQueryDidChange(_ query: String) {
-        guard query.isEmpty else {
+        guard !query.isEmpty else {
             displayedGames = fetchedGames
             return
         }
         
         displayedGames = fetchedGames.filter { $0.title.contains(query) }
-    }
-    
-    func viewDidLoad() {
-        state = .initialLoading
     }
 }

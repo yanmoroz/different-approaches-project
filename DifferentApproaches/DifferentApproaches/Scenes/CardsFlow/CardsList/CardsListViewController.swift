@@ -10,7 +10,14 @@ import UIKit
 final class CardsListViewController: UIViewController {
     var presenter: CardsListPresentation?
     private lazy var customView = view as? CardsListView
-    
+
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = Locals.searchBarPlaceholder
+        searchController.searchResultsUpdater = self
+        return searchController
+    }()
+
     override func loadView() {
         setupUI()
     }
@@ -22,6 +29,7 @@ final class CardsListViewController: UIViewController {
     
     private enum Locals {
         static let title = "Cards"
+        static let searchBarPlaceholder = "Find a card..."
     }
 }
 
@@ -30,6 +38,15 @@ private extension CardsListViewController {
     func setupUI() {
         view = CardsListView()
         title = Locals.title
+        navigationItem.searchController = searchController
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension CardsListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        presenter?.searchQueryDidChange(text)
     }
 }
 
@@ -41,5 +58,9 @@ extension CardsListViewController: CardsListViewInterface {
     
     func setTableViewProvider(_ provider: UITableViewDataSource & UITableViewDelegate) {
         customView?.setTableViewProvider(provider)
+    }
+
+    func toggleLoadingIndicator(visible: Bool) {
+        customView?.toggleLoadingIndicator(visible: visible)
     }
 }

@@ -30,7 +30,17 @@ final class CardsListPresenter {
         }
     }
     
-    private var fetchedCards: [Card] = []
+    private var fetchedCards: [Card] = [] {
+        willSet {
+            displayedCards = newValue
+        }
+    }
+
+    private var displayedCards: [Card] = [] {
+        willSet {
+            setCardsListTableView(cards: newValue)
+        }
+    }
 
     init(view: CardsListViewInterface,
          apiService: MTGApiService) {
@@ -56,16 +66,22 @@ private extension CardsListPresenter {
         switch state {
         case .loading:
             fetchAllCards()
+            toggleLoadingIndicator(visible: true)
         case .loadSucceed(let cards):
             fetchedCards = cards
-            cardsListTableViewProvider.cards = cards
-            setCardsListTableView()
+            toggleLoadingIndicator(visible: false)
         case .loadFailed(let error):
             view?.showError(error)
+            toggleLoadingIndicator(visible: false)
         }
     }
     
-    func setCardsListTableView() {
+    func toggleLoadingIndicator(visible: Bool) {
+        view?.toggleLoadingIndicator(visible: visible)
+    }
+
+    func setCardsListTableView(cards: [Card]) {
+        cardsListTableViewProvider.cards = cards
         view?.setTableViewProvider(cardsListTableViewProvider)
         view?.reloadData()
     }
@@ -83,5 +99,14 @@ extension CardsListPresenter: CardsListTableViewProviderDelegate {
 extension CardsListPresenter: CardsListPresentation {
     func viewDidLoad() {
         state = .loading
+    }
+
+    func searchQueryDidChange(_ query: String) {
+        guard !query.isEmpty else {
+            displayedCards = fetchedCards
+            return
+        }
+
+        displayedCards = fetchedCards.filter { $0.name.contains(query) }
     }
 }
