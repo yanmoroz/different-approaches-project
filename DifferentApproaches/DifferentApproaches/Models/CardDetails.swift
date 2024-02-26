@@ -20,7 +20,14 @@ extension CardDetails {
     init(response: GetCardByIdResponse.Card) {
         name = response.name
         manaCost = response.manaCost
-        imageUrl = response.imageUrl
         text = response.text
+        
+        if response.imageUrl.absoluteURL.scheme == "http" {
+            var components = URLComponents(string: response.imageUrl.absoluteString)
+            components?.scheme = "https"
+            imageUrl = components!.url!
+        } else {
+            imageUrl = response.imageUrl
+        }
     }
 }
