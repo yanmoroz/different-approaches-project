@@ -27,7 +27,7 @@ extension GameDetailsViewController: GameDetailsViewInterface {
         title = game.title
     }
     
-    func updateUI(with game: GameDetails?) {
+    func updateUI(with game: GameDetails) {
         customView?.update(with: game)
     }
 }

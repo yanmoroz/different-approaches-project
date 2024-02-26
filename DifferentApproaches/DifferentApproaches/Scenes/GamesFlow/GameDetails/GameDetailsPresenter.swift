@@ -26,8 +26,9 @@ final class GameDetailsPresenter {
     }
     
     private var fetchedGame: GameDetails? {
-        didSet {
-            view?.updateUI(with: fetchedGame)
+        willSet {
+            guard let newValue else { return }
+            view?.updateUI(with: newValue)
         }
     }
     

@@ -33,8 +33,8 @@ final class GameDetailsView: UIView {
 
 // MARK: - Public Methods
 extension GameDetailsView {
-    func update(with model: GameDetails?) {
-        guard let model else { return }
+    func update(with model: GameDetails) {
+//        guard let model else { return }
 
         titleLabel.text = model.title
 

@@ -9,7 +9,7 @@ import Foundation
 
 protocol GameDetailsViewInterface: ViewInterface {
     func setupUI(with game: Game)
-    func updateUI(with game: GameDetails?)
+    func updateUI(with game: GameDetails)
 }
 
 protocol GameDetailsPresentation {
