@@ -18,7 +18,6 @@ final class URLSessionService {
 // MARK: - HTTPService
 extension URLSessionService: HTTPService {
     func performRequest(_ request: URLRequestable) async throws -> Data {
-        try await Task.sleep(nanoseconds: 3_000_000_000) // TODO: REMOVE
         let (data, response) = try await session.data(for: request.asURLRequest())
         if let response = response as? HTTPURLResponse, !(200..<300).contains(response.statusCode) {
             throw NetworkError.badStatus(response.statusCode)

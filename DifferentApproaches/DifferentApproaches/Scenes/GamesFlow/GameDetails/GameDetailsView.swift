@@ -15,6 +15,12 @@ final class GameDetailsView: UIView {
         return label
     }()
     
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -28,7 +34,14 @@ final class GameDetailsView: UIView {
 // MARK: - Public Methods
 extension GameDetailsView {
     func update(with model: GameDetails?) {
-        titleLabel.text = model?.title
+        guard let model else { return }
+
+        titleLabel.text = model.title
+
+        Task { @MainActor in
+            let data = try! await ImageDownloader.downloadImageData(from: model.thumbnail)
+            imageView.image = UIImage(data: data)
+        }
     }
 }
 
@@ -36,12 +49,18 @@ extension GameDetailsView {
 private extension GameDetailsView {
     func setupUI() {
         backgroundColor = .systemBackground
+        addSubview(imageView)
         addSubview(titleLabel)
         setupConstraints()
     }
     
     func setupConstraints() {
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+//        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+
+        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
     }
 }
