@@ -11,6 +11,8 @@ struct CardDetails: Identifiable {
     let id = UUID()
     let name: String
     let manaCost: String
+    let imageUrl: URL
+    let text: String
 }
 
 // MARK: - Casting Inits
@@ -18,5 +20,7 @@ extension CardDetails {
     init(response: GetCardByIdResponse.Card) {
         name = response.name
         manaCost = response.manaCost
+        imageUrl = response.imageUrl
+        text = response.text
     }
 }

@@ -13,5 +13,7 @@ struct GetCardByIdResponse: Decodable {
     struct Card: Decodable {
         let name: String
         let manaCost: String
+        let imageUrl: URL
+        let text: String
     }
 }
