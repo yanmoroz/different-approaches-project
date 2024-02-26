@@ -90,7 +90,7 @@ private extension CardsListPresenter {
 // MARK: - CardsListTableViewProviderDelegate
 extension CardsListPresenter: CardsListTableViewProviderDelegate {
     func didSelectCard(at index: Int) {
-        let card = fetchedCards[index]
+        let card = displayedCards[index]
         delegate?.didSelectCard(card)
     }
 }

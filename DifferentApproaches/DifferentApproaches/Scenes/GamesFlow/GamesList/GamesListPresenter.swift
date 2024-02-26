@@ -90,7 +90,7 @@ private extension GamesListPresenter {
 // MARK: - GamesListTableViewProviderDelegate
 extension GamesListPresenter: GamesListTableViewProviderDelegate {
     func didSelectGame(at index: Int) {
-        let game = fetchedGames[index]
+        let game = displayedGames[index]
         delegate?.didSelectGame(game)
     }
 }
